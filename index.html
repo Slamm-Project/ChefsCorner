@@ -3,6 +3,8 @@
   <head>
     <title>My first attempt</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200&display=swap" rel="stylesheet">
     <style>
       * {
         margin: 0;
@@ -10,32 +12,40 @@
         box-sizing: border-box;
       }
       body, html {
-        display: flex;
+        display: block;
         flex-direction: column;
         background-color: #faf1de;
-        height: 100vh;
+        height: 100%;
         width: 100vw;
+        overflow-y: auto;
+        overflow-x: hidden;
+        font-family: 'Gothic A1', sans-serif;
       }
       header, footer {
-        max-width: 100vw;
+        max-width: 100%;
         display: flex;
         flex-direction: row;
         color: white;
         background-color: black;
         border: 1px solid white;
-        height: 10%;
+        height: 10vh;
       }
       footer {
+        height: 5vh;
         align-items: center;
         justify-content: center;
+        font-size: 3vh;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: 1;
       }
-      header > div {
-        display: flex;
-        flex-direction: row;
-        max-width: 100%;
+      #navigation {
         height: 100%;
+        width: 360px;
       }
       #headbuttons {
+        margin-right: 20px;
         display: flex;
         align-items: center;
         position: fixed;
@@ -45,15 +55,30 @@
       #headbuttons a {
         display: flex;
         height: 80%;
-        margin: 0 10px;
-        text-decoration-line: none;
+        margin: 0 15px;
+        text-decoration: none;
         color: white;
-        font-size: 20px;
+        font-size: 3.2vh;
         transition: background-color 1000ms linear, color 750ms ease;
+        border-radius: 6px;
+        background-color: black;
       }
       #headbuttons a:hover {
         background-color: white;
         color: black;
+      }
+      #searchcontainer {
+        display: block;
+        flex-grow: 2;
+        align-items: center;
+        height: 100%;
+        margin-left: 10px;
+        margin-top: 2.5vh;
+      }
+      #searchbar {
+        height: 50%;
+        width: 100%;
+        padding-left: 10px;
       }
       a span {
         display: flex;
@@ -62,10 +87,9 @@
         margin: 0 10px;
       }
       #headpics {
-        display: flex;
+        display: block;
         flex-direction: row;
         height: 100%;
-        margin-left: 3vw;
       }
       #headpics img{
         margin: 0 1vw;
@@ -76,32 +100,83 @@
       #HomeBG {
         display: block;
         background: url("HomeBG.jpeg") no-repeat;
-        background-position: center;
+        background-position: bottom;
         background-size: cover;
-        height: 80%;
-        max-width: 100vw;
+        height: 85vh;
+        width: 100%;
+        border-bottom: white 1px solid;
+      }
+      #dishes {
+        display: flex;
+        height: 10vh;
+        width: 100%;
+        margin-top: 10px;
+      }
+      #dishes a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
+        margin-left: 5px;
+        margin-right: 5px;
+        border: 2px white solid;
+        border-radius: 10px; 
+        font-size: 20px;
+        font-weight: bolder;
+        color: white;
+        text-decoration: none;
+        background: black;
+        transition: transform 500ms ease;
+      }
+      #dishes a:hover {
+          transform: scale(1.1) translateY(-10px);
+        }
+      section.sec {
+        width: 100%;
+        height: 450px;
       }
     </style>
   </head>
   <body>
     <header>
-      <div>
         <div id="headpics">
-          <img id="logo" src="Logo.jpeg" alt="Site Logo">
-          <img id="name" src="Name.jpeg" alt="Site Name">
+          <img id="name" src="SecondName.jpeg" alt="Site Name">
         </div>
-        <nav id="headbuttons">
-          <a href="#">
-            <span>About Us</span>
-          </a>
-          <a href="#">
-            <span>Contact Us</span>
-          </a>
-        </nav>
-      </div>
+
+        <div id="searchcontainer">
+          <input id="searchbar" type="text" placeholder="Search..">
+        </div>
+
+        <div id="navigation">
+          <nav id="headbuttons">
+            <a href="#">
+              <span>Community</span>
+            </a>
+            <a href="#">
+              <span>Contact Us</span>
+            </a>
+          </nav>
+        </div>
+
     </header>
 
     <div id="HomeBG"></div>
+
+    <div id="dishes">
+      <a href="#">
+        <div id="Appetizers">APPETIZERS</div>
+      </a>
+      <a href="#">
+        <div id="Entrees">ENTREES</div>
+      </a>
+      <a href="#">
+        <div id="Desserts">DESSERTS</div>
+      </a>
+    </div>
+
+    <section class="sec">
+      
+    </section>
 
     <footer>
       &#169 SLAMM 2021.
