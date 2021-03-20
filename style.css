@@ -108,7 +108,7 @@ header > form input {
   color: white;
 
   opacity: 0;
-  animation: fadeOutAnimation ease 6s;
+  animation: fadeOutAnimation ease 4s;
   animation-delay: 3s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
@@ -141,12 +141,25 @@ footer {
   padding: 0;
   height: 30vh;
   width: 100vw;
-  background-color: rgb(2, 107, 107);
+  background-color: cadetblue;
   color: white;
-  opacity: 0.65;
+  font-size: 95%;
+  flex-direction: column;
+  justify-content: center;
 }
 
-footer div{
+footer > div {
+  display: flex;
+  flex-direction: row;
+  height: 85%;
+}
+
+footer > span {
+  text-align: center;
+  height: 15%;
+}
+
+footer > div > div{
   display: flex;
   height: 100%;
   width: 33.33%;
@@ -158,5 +171,5 @@ footer div{
 }
 
 #SMicon {
-  height: 50%;
+  height: 60%;
 }
