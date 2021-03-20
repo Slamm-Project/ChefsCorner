@@ -79,8 +79,6 @@ header > form input {
   background-repeat: no-repeat;
   height: 90%;
   width: 100vw;
-  opacity: 0.75;
-  filter: brightness(75%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -141,9 +139,9 @@ footer {
   padding: 0;
   height: 30vh;
   width: 100vw;
-  background-color: cadetblue;
+  background-color: black;
   color: white;
-  font-size: 95%;
+  font-size: 2.5vh;
   flex-direction: column;
   justify-content: center;
 }
