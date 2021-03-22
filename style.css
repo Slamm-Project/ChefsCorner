@@ -12,6 +12,10 @@ body, html {
   overflow-x: hidden;
 }
 
+body {
+  background-color: black;
+}
+
 header {
   display: inline-flex;
   height: 10vh;
@@ -72,16 +76,8 @@ header > form input {
 }
 
 #HomeBG {
-  background-image: url('HomeBG.jpeg');
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   height: 90%;
   width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 #welcome {
@@ -169,5 +165,5 @@ footer > div > div{
 }
 
 #SMicon {
-  height: 60%;
+  height: 70%;
 }
