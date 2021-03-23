@@ -80,6 +80,27 @@ header > form input {
   width: 100vw;
 }
 
+.animate {
+  animation-name: fadeAnimation;
+  animation-direction: normal;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;  
+}
+
+@keyframes fadeAnimation {
+  0%{
+    opacity: 0.3;
+  }
+  20%,80%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0.3;
+  }
+}
+
 #welcome {
   display: flex;
   flex-direction: column;
@@ -89,7 +110,7 @@ header > form input {
   height: 50%;
   text-align: center;
 
-  background-image: url('banner2.png');
+  background-image: url('images/banner.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -102,21 +123,25 @@ header > form input {
   color: white;
 
   opacity: 0;
-  animation: fadeOutAnimation ease 4s;
-  animation-delay: 3s;
+  animation: fadeOutAnimation ease 3.5s;
+  animation-delay: 2s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+  z-index: 999;
 }
 
 @keyframes fadeOutAnimation {
   0% {
     opacity: 0;
+    z-index: 999;
   }
   50% {
     opacity: 1;
+    z-index: 999;
   }
   100% {
     opacity: 0;
+    z-index: 999;
     visibility: hidden;
   }
 }
