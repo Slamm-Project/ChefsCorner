@@ -25,3 +25,43 @@ function clearFormInput(){
   preventDefault();
   return false;
 }
+
+function featuredDiv1(){
+var x =
+document.getElementById("Section1Div");
+if (x.style.display=== "none"){
+  x.style.display = "block";
+}else{
+  x.style.display= "none";
+  }
+}
+
+function featuredDiv2(){
+var x =
+document.getElementById("Section2Div");
+if (x.style.display=== "none"){
+  x.style.display = "block";
+}else{
+  x.style.display= "none";
+  }
+}
+
+function featuredDiv3(){
+var x =
+document.getElementById("Section3Div");
+if (x.style.display=== "none"){
+  x.style.display = "block";
+}else{
+  x.style.display= "none";
+  }
+}
+
+function featuredDiv4(){
+var x =
+document.getElementById("Section4Div");
+if (x.style.display=== "none"){
+  x.style.display = "block";
+}else{
+  x.style.display= "none";
+  }
+}
