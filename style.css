@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: 'Gothic A1', sans-serif;
 }
 
 body, html {
@@ -7,7 +8,6 @@ body, html {
   width: 100vw;
   margin: 0;
   padding: 0;
-  font-family: 'Gothic A1', sans-serif;
   display: block;
   overflow-x: hidden;
 }
@@ -75,10 +75,28 @@ header > form input {
   border-radius: 3px;
 }
 
+#About{
+  color: white;
+  font-weight: bold;
+  background-color: cadetblue;
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  height: auto;
+  font-size: 2.5vmin; 
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  width: 94.5vw;
+  margin: 0 auto;
+}
+
+#About span{
+  font-size: 5vmin;
+}
+
 #HomeBG {
   height: 90%;
   width: 94.5vw;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .animate {
@@ -191,4 +209,46 @@ footer > div > div{
 
 #SMicon {
   height: 70%;
+}
+
+#commentsection{
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width: 94.5vw;
+  margin: auto;
+  padding: 1.5em 0;
+}
+
+#commentform{
+  display: flex;
+  flex-direction: column;
+  font-size: 2.5vh;
+}
+
+#commentsection label{
+  margin: 1em 0;
+}
+
+#commentsection input{
+  height: 2.1em;
+}
+
+#commentsection [name="submit"]{
+  margin: 2em auto;
+  background-color: cadetblue;
+  cursor: pointer;
+  height: 2.5em;
+  color: white;
+}
+
+#commentsection textarea{
+  height: 10em;
+  padding: 1em;
+}
+
+#commentsection input, textarea{
+  background-color: rgb(30,30,30);
+  border-color: cadetblue;
+  color: white;
 }

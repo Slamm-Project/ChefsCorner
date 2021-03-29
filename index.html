@@ -4,15 +4,19 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
+  
 	<title>Chef's Corner</title>
-
-  <link rel="preload" as="image" href="images/banner.png" media="(max-width: 50vw)">
-  <link rel="preload" as="image" href="images/h1.jpeg" media="(max-width: 100vw)">
-  <link rel="preload" as="image" href="images/h2.jpeg" media="(max-width: 100vw)">
-  <link rel="preload" as="image" href="images/h3.jpeg" media="(max-width: 100vw)">
-  <link rel="preload" as="image" href="images/h4.jpeg" media="(max-width: 100vw)">
-  <link rel="preload" as="image" href="images/h5.jpeg" media="(max-width: 100vw)">
-
+	<!--  Preload all main images -->
+	<link rel="preload" as="image" href="images/banner.png" media="(max-width: 100vw)" >
+	<link rel="preload" as="image" href="images/h1.jpeg" media="(max-width: 100vw)">
+	<link rel="preload" as="image" href="images/h2.jpeg" media="(max-width: 100vw)">
+	<link rel="preload" as="image" href="images/h3.jpeg" media="(max-width: 100vw)">
+	<link rel="preload" as="image" href="images/h4.jpeg" media="(max-width: 100vw)">
+  <link rel="preload" as="image" href="images/h6.jpeg" media="(max-width: 100vw)">
+  <link rel="preload" as="image" href="images/h7.jpeg" media="(max-width: 100vw)">
+  <link rel="preload" as="image" href="images/h8.jpeg" media="(max-width: 100vw)">
+  <link rel="preload" as="image" href="images/h9.jpeg" media="(max-width: 100vw)">
+	<!--  Link style sheets and fonts-->
 	<link href="style.css" rel="stylesheet" type="text/css" />
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200&display=swap" rel="stylesheet">
@@ -41,6 +45,31 @@
    </div>
 
     <section id="HomeBG"></section>
+
+    <div id="About">
+      <span>About us:</span>
+      <p>
+        Our website provides you with the most mouth-watering and appetizing<br>
+        dishes to fill your stomach. We have selections from the Appetizer, Entrée, Desserts and our featured tab.<br>
+        If you wish, you can also use the searchbar to find dishes of your preference.<br> 
+        Engage with our community tab and comment about what you think!<br>
+        Bon Appetit!
+      </p>
+    </div>
+
+    <section id="commentsection">
+      <h2>Comments</h3>
+      <h5 style="margin-top: 0;">Feel free to leave us a comment.</h5>
+      <form id="commentform" action="">
+        <label for="Name">Name</label>
+        <input type="text" name="Name">
+        <label for="email">Email</label>
+        <input type="email" name="email">
+        <label for="message">Your Message</label>
+        <textarea name="message" id="messagebox" placeholder="Enter your message here."></textarea>
+        <button name="submit" onclick="clearFormInput()">Submit Comment</button>
+      </form>
+    </section>
 
     <footer>
       <div>
