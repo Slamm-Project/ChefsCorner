@@ -72,14 +72,12 @@ if (x.style.display=== "none"){
 function displayInfo(){
   let cds = document.querySelectorAll('.card');
   for (let i = 0; i < cds.length; i++){
-    cds[i].addEventListener('click', function(){
-      let cardinfo = cds[i].querySelector('.hideInfo');
-        if (cardinfo.classList.contains('showInfo')){
-          cardinfo.classList.remove('showInfo');
-        }
-        else {
-          cardinfo.classList.add('showInfo');
-        }
-    }, false);
+    let cardinfo = cds[i].querySelector('.hideInfo');
+    if (cardinfo.classList.contains('showInfo')){
+      cardinfo.classList.remove('showInfo');
+    }
+    else {
+      cardinfo.classList.add('showInfo');
+    }
   }
 }
