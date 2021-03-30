@@ -69,15 +69,9 @@ if (x.style.display=== "none"){
   }
 }
 
-function displayInfo(){
-  let cds = document.querySelectorAll('.card');
-  for (let i = 0; i < cds.length; i++){
-    let cardinfo = cds[i].querySelector('.hideInfo');
-    if (cardinfo.classList.contains('showInfo')){
-      cardinfo.classList.remove('showInfo');
-    }
-    else {
-      cardinfo.classList.add('showInfo');
-    }
-  }
-}
+document.querySelectorAll('.card').forEach(div => {
+  div.addEventListener('click', () => {
+    let cardinfo = div.querySelector('.hideInfo');
+    cardinfo.classList.toggle('showInfo');
+  });
+});

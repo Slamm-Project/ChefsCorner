@@ -408,4 +408,7 @@ footer > div > div{
   width: 100%;
   background-color: rgb(30,30,30);
   color: white;
+  font-weight: bold;
+  padding-top: 5%;
+  text-align: center; 
 }
