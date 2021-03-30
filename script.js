@@ -70,24 +70,23 @@ if (x.style.display=== "none"){
 }
 
 function displayInfo(){
-  let cds = document.getElementsByClassName("card");
+  let cds = document.querySelectorAll('.card');
   for (let i = 0; i < cds.length; i++){
     cds[i].addEventListener('click', function(){
       let cardinfo = cds[i].querySelector('.hideInfo');
-      cardinfo.classList.add('showInfo');
-      cardinfo.classList.remove('hideInfo');
+        cardinfo.classList.add('showInfo');
+        cardinfo.classList.remove('hideInfo');
     }, false);
   }
 }
 
 function notDisplayInfo(){
-  let btns = document.getElementsByClassName("close-btn");
+  let btns = document.querySelectorAll('.close-btn');
   for (let i = 0; i < btns.length; i++){
     btns[i].addEventListener('click', function(){
-      if (btns[i].parentElement.classList.contains('showInfo')){
-        btns[i].parentElement.className = '';
-        btns[i].parentElement.classList.add('hideInfo');
-      }
+      btns[i].parentElement.classList.remove('showInfo');
+      btns[i].parentElement.classList.remove('hideInfo');
+      btns[i].parentElement.classList.add('test');
     }, false);
   }
 }

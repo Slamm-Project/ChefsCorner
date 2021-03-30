@@ -323,7 +323,7 @@ footer > div > div{
 
 #Section1Div{
   width: 94.5vw;
-  height: 70vh;
+  height: 60vh;
   padding: 0;
   margin: 10px auto;
   background: rgb(233,84,9);
@@ -332,7 +332,7 @@ footer > div > div{
 
 #Section2Div{
   width: 94.5vw;
-  height: 70vh;
+  height: 60vh;
   padding: 0;
   margin: 10px auto;
   background: rgb(145,17,63);
@@ -341,7 +341,7 @@ footer > div > div{
 
 #Section3Div{
   width: 94.5vw;
-  height: 70vh;
+  height: 60vh;
   padding: 0;
   margin: 10px auto;
   background: rgb(5,39,158);
@@ -350,7 +350,7 @@ footer > div > div{
 
 #Section4Div{
   width: 94.5vw;
-  height: 70vh;
+  height: 60vh;
   padding: 0;
   margin: 10px auto;
   background: rgb(44,152,4);
@@ -390,6 +390,7 @@ footer > div > div{
 }
 
 .container {
+  display: flex;
   width: 80%;
   height: 100%;
 }
@@ -397,7 +398,7 @@ footer > div > div{
 .card {
   position: relative;
   height: 100%;
-  width: 33.3%;
+  width: 25%;
 }
 
 .card a {
