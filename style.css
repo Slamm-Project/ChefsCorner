@@ -357,19 +357,6 @@ footer > div > div{
   background: linear-gradient(0deg, rgba(44,152,4,1) 0%, rgba(255,255,255,1) 100%);
 }
 
-.close-btn {
-  display: inline-block;
-  float: right;
-  font-size: 2em;
-  padding: 5px;
-  cursor: pointer;
-}
-
-.close-btn:hover {
-  background-color: lightgrey;
-}
-
-
 .hideInfo {
   display: none;
   overflow: hidden;
@@ -408,7 +395,6 @@ footer > div > div{
   height: 100%;
   width: 100%;
   text-decoration: none;
-  cursor: pointer;
 }
 
 .card img {
