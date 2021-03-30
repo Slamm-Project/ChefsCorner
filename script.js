@@ -74,19 +74,12 @@ function displayInfo(){
   for (let i = 0; i < cds.length; i++){
     cds[i].addEventListener('click', function(){
       let cardinfo = cds[i].querySelector('.hideInfo');
-        cardinfo.classList.add('showInfo');
-        cardinfo.classList.remove('hideInfo');
-    }, false);
-  }
-}
-
-function notDisplayInfo(){
-  let btns = document.querySelectorAll('.close-btn');
-  for (let i = 0; i < btns.length; i++){
-    btns[i].addEventListener('click', function(){
-      btns[i].parentElement.classList.remove('showInfo');
-      btns[i].parentElement.classList.remove('hideInfo');
-      btns[i].parentElement.classList.add('test');
+        if (cardinfo.classList.contains('showInfo')){
+          cardinfo.classList.remove('showInfo');
+        }
+        else {
+          cardinfo.classList.add('showInfo');
+        }
     }, false);
   }
 }

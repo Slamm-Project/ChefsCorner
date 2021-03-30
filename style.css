@@ -401,6 +401,7 @@ footer > div > div{
   height: 100%;
   width: 25%;
   margin: 0 2vw;
+  cursor: pointer;
 }
 
 .card a {
