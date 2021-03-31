@@ -444,27 +444,24 @@ footer > div > div{
   justify-content: flex-start;
 }
 
- .slider {
+#Section1Div .slider {
   display: flex;
   height: 100%;
   flex-shrink: 0;
   margin: 0 auto;
   position: relative;
   transition: transform 1000ms ease;
-}
-
-#Section1Div .slider {
   width: 366.67%;
 }
 
 #Section2Div .slider {
   display: flex;
   height: 100%;
-  width: 300%;
   flex-shrink: 0;
   margin: 0 auto;
   position: relative;
   transition: transform 1000ms ease;
+  width: 100%;
 }
 
 #Section3Div .slider {
@@ -485,34 +482,6 @@ footer > div > div{
   margin: 0 auto;
   position: relative;
   transition: transform 1000ms ease;
-}
-
-.nav button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  color: white;
-  background-color: cadetblue;
-  height: 8vmin;
-  width: 8vmin;
-  font-size: 2.5em;
-  border-radius: 50%;
-  border: none;
-  cursor: pointer;
-  transition: filter 500ms ease;
-  outline: none;
-}
-
-.nav button:hover {
-  filter: brightness(0.8);
-}
-
-.nav .next {
-  right: 5px;
-}
-
-.nav .prev {
-  left: 5px;
 }
 
 .card {
@@ -546,4 +515,32 @@ footer > div > div{
   font-weight: bold;
   padding-top: 5%;
   text-align: center; 
+}
+
+.nav button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  background-color: cadetblue;
+  height: 8vmin;
+  width: 8vmin;
+  font-size: 2.5em;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: filter 500ms ease;
+  outline: none;
+}
+
+.nav button:hover {
+  filter: brightness(0.8);
+}
+
+.nav .next {
+  right: 5px;
+}
+
+.nav .prev {
+  left: 5px;
 }
