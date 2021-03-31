@@ -1,5 +1,13 @@
 let index = -1;
 let images = ['images/h1.jpeg','images/h2.jpeg','images/h3.jpeg','images/h4.jpeg','images/h6.jpeg','images/h7.jpeg','images/h8.jpeg','images/h9.jpeg'];
+
+function preloader(){
+  for (let img of images){
+    img = new Image();
+    img = images[i].src;
+  } 
+}
+
 showSlides();
 function showSlides(){
   index++;
