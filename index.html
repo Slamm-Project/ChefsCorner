@@ -26,7 +26,7 @@
 <body>
 	<header>
 		<img src="images/Name.jpeg" alt="SiteName">
-      <a href="#">
+      <a href="#About">
         <span>About</span>
       </a>
       <a href="#Contact">
@@ -48,187 +48,390 @@
     <section id="HomeBG"></section>
 
     <div id = "featured">
-      <a href="#" onclick = "featuredDiv1()">
+      <a id="appz" href="#" onclick = "featuredDiv1()">
        <span>Appetizer</span>
       </a>
-      <a href="#"onclick = "featuredDiv2()">
+      <a id="entr" href="#"onclick = "featuredDiv2()">
         <span>Entree</span>
       </a>
-      <a href="#"onclick = "featuredDiv3()">
+      <a id="dess" href="#"onclick = "featuredDiv3()">
         <span>Dessert</span>
       </a>
-      <a href="#"onclick = "featuredDiv4()">
+      <a id="drnk" href="#"onclick = "featuredDiv4()">
         <span>Drinks</span>
       </a>
     </div>
 
     <div id = "Section1Div" style="display:none;">
       <div class="container">
+        <div class="carousel">
+          <div class="slider">
 
-        <div class="card">
-          <a>
-            <img src="A/a1.jpg" alt="a1">
-            <div class="dishName">Crispy Salmon Tacos</div>
-          </a>
-          <div class="hideInfo">
-            <span style="font-weight: bold;">Ingredients</span>
-            <ul>
-              <li>160 g ripe mixed-colour cherry tomatoes</li>
-              <li>1 small ripe mango</li>
-              <li>½ a small ripe avocado</li>
-              <li>2 spring onions</li>
-              <li>2 x 130 g salmon fillets , skin on, scaled, pin-boned, from sustainable sources</li>
-              <li>2 heaped teaspoons Cajun seasoning</li>
-              <li>4 small tortillas</li>
-              <li>2 limes</li>
-            </ul>
-            <span style="font-weight: bold;">Method</span>
-            <p>
-              Quarter the cherry tomatoes. Destone, peel and roughly chop the mango. Scoop out the avocado and finely slice. Trim and finely slice the spring onions. Carefully cut the skin off the salmon and place it in a non-stick frying pan on a medium-high heat to crisp up on both sides. Pat the Cajun seasoning all over the salmon fillets, then fry for 5 minutes, turning to get them golden on each of their sides. Once the skin is crispy, move it to sit on top of the salmon. <br>
-              <br>
-              Meanwhile, use tongs to toast the tortillas directly over the flame of your gas hob for 15 seconds, or use a hot pan. Sprinkle the mango, avocado and spring onions over the tortillas, then flake over the salmon and crack over the skin. Toss the tomatoes and the juice of 1 lime in the residual heat of the pan for 30 seconds, then spoon over the tortillas. Serve with lime wedges, for squeezing over.
-            </p>
+            <div class="card">
+              <a>
+                <img src="A/a1.jpg" alt="a1">
+                <div class="dishName">Crispy Salmon Tacos</div>
+              </a>
+              <div class="hideInfo">
+                <span style="font-weight: bold;">Ingredients</span>
+                <ul>
+                  <li>160 g ripe mixed-colour cherry tomatoes</li>
+                  <li>1 small ripe mango</li>
+                  <li>½ a small ripe avocado</li>
+                  <li>2 spring onions</li>
+                  <li>2 x 130 g salmon fillets , skin on, scaled, pin-boned, from sustainable sources</li>
+                  <li>2 heaped teaspoons Cajun seasoning</li>
+                  <li>4 small tortillas</li>
+                  <li>2 limes</li>
+                </ul>
+                <span style="font-weight: bold;">Method</span>
+                <p>
+                  Quarter the cherry tomatoes. Destone, peel and roughly chop the mango. Scoop out the avocado and finely slice. Trim and finely slice the spring onions. Carefully cut the skin off the salmon and place it in a non-stick frying pan on a medium-high heat to crisp up on both sides. Pat the Cajun seasoning all over the salmon fillets, then fry for 5 minutes, turning to get them golden on each of their sides. Once the skin is crispy, move it to sit on top of the salmon. <br>
+                  <br>
+                  Meanwhile, use tongs to toast the tortillas directly over the flame of your gas hob for 15 seconds, or use a hot pan. Sprinkle the mango, avocado and spring onions over the tortillas, then flake over the salmon and crack over the skin. Toss the tomatoes and the juice of 1 lime in the residual heat of the pan for 30 seconds, then spoon over the tortillas. Serve with lime wedges, for squeezing over.
+                </p>
+              </div>
+            </div>
+
+            <div class="card">
+              <a>
+                <img src="A/a2.jpg" alt="a2">
+                <div class="dishName">Mega Veggie Burgers</div>
+              </a>
+              <div class="hideInfo">
+                <span style="font-weight: bold;">Ingredients</span>
+                <ul>
+                  <li>350 g firm silken tofu</li>
+                  <li>1 large free-range egg</li>
+                  <li>75 g wholemeal breadcrumbs</li>
+                  <li>2 heaped teaspoons Marmite</li>
+                  <li>8 ripe tomatoes</li>
+                  <li>1 tablespoon red wine vinegar</li>
+                  <li>2 sprigs of fresh basil</li>
+                  <li>	4 soft wholemeal buns</li>
+                  <li>400 g mixed seasonal salad veg, such as cucumber, red cabbage, apples, cress, baby spinach</li>
+                  <li>olive oil</li>
+                  <li>2 sprigs of fresh rosemary</li>
+                  <li>50 g Cheddar cheese</li>
+                  <li>50 g gherkins</li><br>
+                  <span style="font-weight:bold;">Creamy Basil Dressing</span><br>
+                  <li>4 tablespoons natural yoghurt</li>
+                  <li>tablespoon white wine vinegar</li>
+                  <li>1 teaspoon Dijon mustard</li>
+                  <li>4 sprigs of fresh basil</li>
+                  <li>¼ of a fresh red chilli</li>
+                </ul>
+
+                <span style="font-weight: bold;">Method</span>
+                <ol>
+                  <li>Wrap the tofu in a clean tea towel, then squeeze and wring it out to remove the excess liquid (about 4 tablespoons should come out – it’s messy, but really important to do this for great burger texture later).</li>
+                  <li>Place the tofu in a bowl, scraping it off the tea towel. Crack in the egg, then add the breadcrumbs and Marmite. Mix and scrunch together really well with clean hands, then shape into 4 even-sized patties that’ll fit nicely in your buns once cooked.
+                  <li>Roughly chop the tomatoes and put into a dry non-stick frying pan on a high heat with a pinch of black pepper, a splash of water and the vinegar.</li>
+                  <li>Squash the tomatoes with a potato masher, cook for 10 to 15 minutes, or until thick and delicious, then tear in the basil leaves and season to perfection (I sometimes add a pinch of dried red chilli flakes too, for a kick).</li>
+                  <li>If you want to plump up your buns, pop them into a warm oven for a few minutes.</li>
+                  <li>Meanwhile, finely slice or prep all the salad veg.</li>
+                  <li>Next, pick the basil leaves into a blender and blitz with all the other dressing ingredients and a pinch of salt and pepper until super-smooth.</li>
+                  <li>Place 2 teaspoons of oil in a large non-stick frying pan on a medium heat. Pick the rosemary leaves into the pan in four piles, place the patties on top and cook for 3 minutes on each side, or until golden.</li>
+                  <li>Slice or grate the cheese, place on the patties, reduce the heat to low, then cover and leave to melt for 3 to 4 minutes.</li>
+                  <li>Spread the tomato sauce into the buns, then sandwich the cheesy burgers and sliced gherkins inside.</li>
+                  <li>Toss the salad with half the dressing (save the rest for another day), serve alongside the burgers and enjoy – totally awesome.</li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="card">
+              <a>
+                <img src="A/a3.jpg" alt="a3">
+                <div class="dishName">Super Spinach Pancakes</div>
+              </a>
+              <div class="hideInfo">
+                <span style="font-weight: bold;">Ingredients</span>
+                <ul>
+                <li>1 ripe avocado</li>
+                <li>350 g mixed-colour cherry tomatoes</li>
+                <li>100 g baby spinach</li>
+                <li>3 spring onions</li>
+                <li>½ a bunch of fresh coriander, (15g)</li>
+                <li>1 lime</li>
+                <li>extra virgin olive oil</li>
+                <li>1 large free-range egg</li>
+                <li>1 mug of self-rising flour</li>
+                <li>1 mug of semi-skimmed milk</li>
+                <li>olive oil</li>
+                <li>300 g cottage cheese</li>
+                <li>hot chilli sauce</li>
+                </ul>
+
+                <span style="font-weight: bold;">Method</span>
+                <ol>
+                  <li>Halve, destone, peel and finely slice the avocado and quarter the tomatoes, then place in a salad bowl with a quarter of the spinach.</li>
+                  <li>Trim, finely slice and add the spring onions and pick in the coriander leaves, then squeeze over the lime juice.</li>
+                  <li>Drizzle with 1 tablespoon of extra virgin olive oil, season to perfection with sea salt and black pepper, toss to coat and put aside.</li>
+                  <li>Crack the egg into a blender, add the flour, milk, remaining spinach and a pinch of salt and pepper, then blitz until smooth.</li>
+                  <li>Place a large non-stick frying pan on a medium heat, rub the pan with a little olive oil, then pour in a thin layer of batter, swirling it up and around the edges. Cook on one side only for 2 minutes, or until lightly golden, then stack up on a serving plate and repeat.</li>
+                  <li>Top each pancake with dollops of cottage cheese, the avocado salad, and a few good shakes of chilli sauce. Really nice served with extra lime wedges for squeezing over, and a fried egg on top, if you fancy.</li>
+
+                </ol>
+              </div>
+            </div>
+
+            <div class="card">
+              <a>
+                <img src="A/a4.jpg" alt="a4">
+                <div class="dishName">Smokey chorizo Salmon</div>
+              </a>
+              <div class="hideInfo">
+                <span style="font-weight: bold;">Ingredients</span>
+                <ul>
+                  <li>2 x 150 g salmon fillets , skin on, scaled, pin-boned, from sustainable sources</li>
+                  <li>300 g ripe mixed-colour cherry tomatoes</li>
+                  <li>4 sprigs of fresh basil</li>
+                  <li>8 black olives , (stone in)</li>
+                  <li>30 g higher-welfare chorizo</li>
+                </ul>
+
+                <span style="font-weight: bold;">Method</span>
+                <ol>
+                  <li>Put the salmon flesh side down in a large cold non-stick frying pan and place on a medium-high heat.</li>
+                  <li>As the pan comes up to temperature and the salmon begins to sizzle (about 3 minutes), flip it over and cook on the skin side for 5 minutes, or until very crisp and just cooked (depending on its thickness).</li>
+                  <li>Meanwhile, halve the cherry tomatoes, tear up most of the basil leaves, then toss it all with 1 tablespoon of red wine vinegar and a pinch of sea salt and black pepper.</li>
+                  <li>Squash the olives and discard the stones, then finely chop the flesh. Mix with 1 teaspoon of extra virgin olive oil and a splash of water.</li>
+                  <li>Finely slice the chorizo, add to the pan for the last 2 minutes, then toss in the dressed tomatoes for 30 seconds.</li>
+                  <li>Divide between your plates, with the salmon on top. Spoon over the dressed olives and pick over the remaining basil.</li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="card">
+              <a>
+                <img src="A/a5.jpg" alt="a5">
+                <div class="dishName">Pesto Mussels and Toast</div>
+              </a>
+              <div class="hideInfo">
+                <span style="font-weight: bold;">Ingredients</span>
+                <ul>
+                  <li>70 g pesto</li>
+                  <li>2 thick slices of wholemeal bread , (50g each)</li>
+                  <li>200g baby courgettes</li>
+                  <li>200g ripe mixed-colour cherry tomatoes , on the vine</li>
+                  <li>500g mussels , scrubbed, debearded, from sustainable sources</li>
+                  <li>160g fresh or frozen peas</li>
+                  <li>50ml white wine , optional</li>
+                  <li>2 sprigs of fresh basil</li>
+                </ul>
+
+                <span style="font-weight: bold;">Method</span>
+                <ol>
+                  <li>Put a large pan on a medium-high heat, and toast the bread as the pan heats up, turning when golden.</li>
+                  <li>Trim and finely slice the courgettes, and halve the cherry tomatoes.</li>
+                  <li>Check the mussels – if any are open, just give them a little tap and they should close; if they don’t they’re no good, so chuck those ones away.</li>
+                  <li>Remove the toast and spread one quarter of the pesto on each slice. You can find a recipe for my Super-quick batch pesto, if you'd like to have a go at making your own.</li>
+                  <li>Turn the heat under the pan up to full whack and tip in the mussels. Stir in the remaining pesto, the courgettes, tomatoes and peas.</li>
+                  <li>Add the wine (if using), or a good splash of water. Cover with a lid and leave to steam for 3 to 4 minutes, shaking the pan occasionally.</li>
+                  <li>When all the mussels have opened and are soft and juicy, they’re ready. If any remain closed, simply throw those away. Divide the mussels, veg and all those gorgeous juices between two large bowls, pick over the basil leaves and serve with the pesto toasts on the side for some epic dunking.</li>
+                </ol>
+              </div>
+            </div>
+
+          <div class="card">
+              <a>
+                <img src="A/a6.jpg" alt="a6">
+                <div class="dishName">Spicy 'Nduja Vongole</div>
+              </a>
+              <div class="hideInfo">
+                <span style="font-weight: bold;">Ingredients</span>
+                <ul>
+                  <li>150 g dried linguine</li>
+                  <li>500 g clams , scrubbed, from sustainable sources</li>
+                  <li>20 g higher-welfare ’nduja</li>
+                  <li>½ a bunch of fresh flat-leaf parsley , (15g)</li>
+                  <li>100 ml light rosé wine</li>
+                </ul>
+
+                <span style="font-weight: bold;">Method</span>
+                <ol>
+                  <li>Cook the pasta in a pan of boiling salted water according to the packet instructions, draining 1 minute early and reserving a mugful of cooking water.</li>
+                  <li>Meanwhile, sort through the clams, giving any that aren’t tightly closed a tap. If they don’t close, discard them.</li>
+                  <li>Tear the ’nduja into a large cold non-stick frying pan, add 1 tablespoon of olive oil, place on a medium heat and let the ’nduja melt while you finely chop the parsley (stalks and all).</li>
+                  <li>Stir most of the parsley into the ’nduja pan with the clams and rosé, and put the lid on.</li>
+                  <li>After 3 or 4 minutes the clams will start to open – keep jiggling the pan until they’ve all opened, then remove from the heat, discarding any unopened clams.</li>
+                  <li>Toss the drained pasta into the clam pan with a splash of reserved cooking water and simmer for 1 minute. Taste and season to perfection with sea salt and black pepper, if needed.</li>
+                  <li>Dish up, drizzle with a little extra virgin olive oil and scatter over the remaining parsley, and tuck in.</li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="card">
+              <a>
+                <img src="A/a7.jpg" alt="a7">
+                <div class="dishName">Hot and Sour Chicken Brouth</div>
+              </a>
+              <div class="hideInfo">
+                <span style="font-weight: bold;">Ingredients</span>
+                <ul>
+                  <li>2 shallots</li>
+                  <li>3 sticks of lemongrass</li>
+                  <li>5 cm ginger</li>
+                  <li>2 cloves of garlic</li>
+                  <li>1-2 fresh red chillies</li>
+                  <li>½ a bunch of fresh coriander , (15g)</li>
+                  <li>1 bunch of spring onions</li>
+                  <li>2 free-range chicken breasts</li>
+                  <li>groundnut oil</li>
+                  <li>1.75 litres light organic chicken or vegetable stock</li>
+                  <li>fish sauce</li>
+                  <li>3 limes</li>
+                  <li>1 large handful of beansprouts , (ready to eat)</li>
+                </ul>
+
+                <span style="font-weight: bold;">Method</span>
+                <ol>
+                  <li>Peel and finely dice the shallots, then remove the outer leaves from the lemongrass and finely chop the remainder.</li>
+                  <li>Peel and finely grate the ginger and garlic, and finely slice the chilli. Pick the coriander leaves, then trim and shred the spring onions and set aside. Next, cut the chicken into finger-width strips.</li>
+                  <li>Gently sweat the shallots in a splash of oil until soft. Throw in the lemongrass, ginger and garlic, and fry for 1 minute. Add the stock and most of the chilli.</li>
+                  <li>Add the chicken and simmer for about 8 minutes or until the chicken is cooked through. Add a splash of fish sauce and squeeze in the lime juice.</li>
+                  <li>Taste and add more fish sauce, lime juice or chilli as needed. At the last minute, add the coriander, beansprouts and spring onions, then divide between bowls.</li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="card">
+              <a>
+                <img src="A/a8.jpg" alt="a8">
+                <div class="dishName">Prawns and Chorizo Orzo</div>
+              </a>
+              <div class="hideInfo">
+                <span style="font-weight: bold;">Ingredients</span>
+                <ul>
+                  <li>2 cloves of garlic</li>
+                  <li>200 g quality chorizo</li>
+                  <li>½ a bunch of fresh basil , (15g)</li>
+                  <li>4 tablespoons olive oil</li>
+                  <li>2 tablespoons sherry vinegar</li>
+                  <li>400 ml passata</li>
+                  <li>300 g orzo</li>
+                  <li>200 g cherry tomatoes, on the vine</li>
+                  <li>400 g large cooked peeled king prawns, from sustainable sources</li>
+
+                </ul>
+
+                <span style="font-weight: bold;">Method</span>
+                <ol>
+                  <li>Preheat the oven to 180ºC/350ºF/gas 4.</li>
+                  <li>Peel and finely chop the garlic, and slice the chorizo. Pick and finely chop the basil.</li>
+                  <li>Heat half the oil in a heavy-based pan. Fry the garlic and chorizo for 3 minutes, then deglaze the pan with the vinegar.</li>
+                  <li>Add the passata and 300ml of water, then the orzo. Bring to the boil, reduce the heat and simmer for 10 to 15 minutes, or until the orzo is al dente, stirring occasionally to prevent it sticking.</li>
+                  <li>Spread the cherry tomatoes over a baking tray, drizzle with the rest of the oil and season. Roast for 10 minutes, or until soft.</li>
+                  <li>tir half the basil into the pasta, along with the prawns.</li>
+                  <li>Divide between bowls, top with the remaining basil and serve the roasted tomatoes alongside.</li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="card">
+              <a>
+                <img src="A/a9.jpg" alt="a9">
+                <div class="dishName">Pepper Noodle Soup</div>
+              </a>
+              <div class="hideInfo">
+                <span style="font-weight: bold;">Ingredients</span>
+                <ul>
+                  <li>200 g rice noodles</li>
+                  <li>1 red pepper</li>
+                  <li>1 yellow pepper</li>
+                  <li>2 cloves of garlic</li>
+                  <li>2 fresh red chillies</li>
+                  <li>1 x 198 g tin of sweetcorn</li>
+                  <li>1 bunch of spring onions</li>
+                  <li>1 handful of salted peanuts</li>
+                  <li>3 tablespoons olive oil</li>
+                  <li>2 limes</li>
+                </ul>
+
+                <span style="font-weight: bold;">Method</span>
+                <ol>
+                  <li>Soak the noodles in a large bowl of warm water for 20 minutes.
+                  <li>Deseed and slice the peppers into strips, peel and finely slice the garlic and deseed and finely slice the chillies.
+                  <li>Drain and rinse the sweetcorn. Trim and finely slice the spring onions, and roughly chop the peanuts.
+                  <li>Bring a large pan of water to the boil, drain the noodles and add to the pan. Bring back to the boil and cook the noodles for a couple of minutes until soft. Drain the noodles and immerse in a bowl of cold water until you are ready to use them.
+                  In a large frying pan, heat 1 tablespoon of olive oil, then add the peppers, garlic and chillies and cook for a couple of minutes, or until the peppers soften slightly.
+                  <li>Drain the noodles, stir in the contents of the frying pan, add the sweetcorn and spring onion, drizzle over the remaining oil and squeeze over the lime juice and mix well to coat.
+                  <li>Scatter over the salted peanuts and season with black pepper.
+                </ol>
+              </div>
+            </div>
+
+            <div class="card">
+              <a>
+                <img src="A/a10.jpg" alt="a10">
+                <div class="dishName">Tomato and Basel Omelette</div>
+              </a>
+              <div class="hideInfo">
+                <span style="font-weight: bold;">Ingredients</span>
+                <ul>
+                  <li>2 sprigs of fresh basil</li>
+                  <li>3 cherry tomatoes</li>
+                  <li>2 large free-range eggs</li>
+                  <li>olive oil</li>
+                </ul>
+
+                <span style="font-weight: bold;">Method</span>
+                <ol>
+                  <li>Pick the leaves off the basil and roughly tear them.</li>
+                  <li>Cut the cherry tomatoes in half on a chopping board.</li>
+                  <li>Crack the eggs into a mixing bowl.</li>
+                  <li>Add a tiny pinch of salt and pepper.</li>
+                  <li>Beat well with a fork until fully combined.</li>
+                  <li>Place a small non-stick frying pan on a low heat to warm up. Meanwhile…</li>
+                  <li>Add ½ tablespoon of olive oil to the pan and turn the heat up to high.</li>
+                  <li>Carefully add the tomatoes and fry for 1 minute.</li>
+                  <li>Turn the heat down to low and sprinkle over the basil leaves.</li>
+                  <li>Carefully pour in the eggs, then tilt the pan to spread them out evenly.</li>
+                  <li>Using a fork, swirl the eggs around the pan a little.</li>
+                  <li>When the omelette begins to cook and firm up, but still has a little raw egg on top, use a spatula to ease around the edges of the omelette, then fold it over in half – when it starts to turn golden brown underneath, remove the pan from the heat and slide the omelette on to a plate.</li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="card">
+              <a>
+                <img src="A/a11.jpg" alt="a11">
+                <div class="dishName">Tagliatelle with Asparagus and Tomato</div>
+              </a>
+              <div class="hideInfo">
+                <span style="font-weight: bold;">Ingredients</span>
+                <ul>
+                  <li>olive oil</li>
+                  <li>2 cloves garlic , peeled and sliced</li>
+                  <li>1 small bunch basil , leaves and stalks finely chopped</li>
+                  <li>2 x 400 g tinned plum tomatoes</li>
+                  <li>sea salt</li>
+                  <li>freshly ground black pepper</li>
+                  <li>1 bunch asparagus</li>
+                  <li>500 g fresh tagliatelle</li>
+                  <li>extra virgin olive oil, to serve</li>
+                  <li>Parmesan cheese, to serve</li>
+                </ul>
+
+                <span style="font-weight: bold;">Method</span>
+                <ol>
+                  <li>As kids love pasta and tomato sauce, this is an easy way to encourage them to try asparagus. Like the ‘full of veg’ tomato sauce you can always whiz the asparagus in a blender if you think they’ll be suspicious of the green bits.</li>
+                  <li>The tomato does a good job of mellowing the flavour of the asparagus and once they’re used to eating it there are loads of wonderful dishes you can introduce them to.</li>
+                  <li>Heat a saucepan over a medium heat and add a nice lug of olive oil. Add the garlic and fry until it turns a light golden brown. Add the chopped basil stalks and tinned tomatoes, and bring to the boil. Season with pepper and a tiny pinch of salt, then simmer for 5 minutes.</li>
+                  <li>Snap the woody ends off the asparagus stalks and throw them away. You can either chop the asparagus finely with a knife or use a food processor. Add it to the tomato sauce, let it simmer for 1 minute or so, then take it off the heat. Taste, and add a little salt and pepper if needed. Finish off the sauce by stirring in the basil leaves.</li>
+                  <li>Cook the tagliatelle according to the packet instructions, then drain, reserving some of the pasta water. Toss in the pasta sauce with a little of the water to loosen. Serve with a drizzle of extra virgin olive oil and plenty of Parmesan cheese.</li>
+                </ol>
+              </div>
+            </div>
+
+          </div>
+          <div class="nav">
+              <button class="prev">&#171;</button>
+              <button class="next">&#187;</button>
           </div>
         </div>
-
-        <div class="card">
-          <a>
-            <img src="A/a2.jpg" alt="a2">
-            <div class="dishName">Mega Veggie Burgers</div>
-          </a>
-          <div class="hideInfo">
-            <span style="font-weight: bold;">Ingredients</span>
-            <ul>
-              <li>350 g firm silken tofu</li>
-              <li>1 large free-range egg</li>
-              <li>75 g wholemeal breadcrumbs</li>
-              <li>2 heaped teaspoons Marmite</li>
-              <li>8 ripe tomatoes</li>
-              <li>1 tablespoon red wine vinegar</li>
-              <li>2 sprigs of fresh basil</li>
-              <li>	4 soft wholemeal buns</li>
-              <li>400 g mixed seasonal salad veg, such as cucumber, red cabbage, apples, cress, baby spinach</li>
-              <li>olive oil</li>
-              <li>2 sprigs of fresh rosemary</li>
-              <li>50 g Cheddar cheese</li>
-              <li>50 g gherkins</li><br>
-              <span style="font-weight:bold;">Creamy Basil Dressing</span><br>
-              <li>4 tablespoons natural yoghurt</li>
-              <li>tablespoon white wine vinegar</li>
-              <li>1 teaspoon Dijon mustard</li>
-              <li>4 sprigs of fresh basil</li>
-              <li>¼ of a fresh red chilli</li>
-            </ul>
-
-            <span style="font-weight: bold;">Method</span>
-            <ol>
-              <li>Wrap the tofu in a clean tea towel, then squeeze and wring it out to remove the excess liquid (about 4 tablespoons should come out – it’s messy, but really important to do this for great burger texture later).</li>
-              <li>Place the tofu in a bowl, scraping it off the tea towel. Crack in the egg, then add the breadcrumbs and Marmite. Mix and scrunch together really well with clean hands, then shape into 4 even-sized patties that’ll fit nicely in your buns once cooked.
-              <li>Roughly chop the tomatoes and put into a dry non-stick frying pan on a high heat with a pinch of black pepper, a splash of water and the vinegar.</li>
-              <li>Squash the tomatoes with a potato masher, cook for 10 to 15 minutes, or until thick and delicious, then tear in the basil leaves and season to perfection (I sometimes add a pinch of dried red chilli flakes too, for a kick).</li>
-              <li>If you want to plump up your buns, pop them into a warm oven for a few minutes.</li>
-              <li>Meanwhile, finely slice or prep all the salad veg.</li>
-              <li>Next, pick the basil leaves into a blender and blitz with all the other dressing ingredients and a pinch of salt and pepper until super-smooth.</li>
-              <li>Place 2 teaspoons of oil in a large non-stick frying pan on a medium heat. Pick the rosemary leaves into the pan in four piles, place the patties on top and cook for 3 minutes on each side, or until golden.</li>
-              <li>Slice or grate the cheese, place on the patties, reduce the heat to low, then cover and leave to melt for 3 to 4 minutes.</li>
-              <li>Spread the tomato sauce into the buns, then sandwich the cheesy burgers and sliced gherkins inside.</li>
-              <li>Toss the salad with half the dressing (save the rest for another day), serve alongside the burgers and enjoy – totally awesome.</li>
-            </ol>
-          </div>
-        </div>
-
-        <div class="card">
-          <a>
-            <img src="A/a3.jpg" alt="a3">
-            <div class="dishName">Super Spinach Pancakes</div>
-          </a>
-          <div class="hideInfo">
-            <span style="font-weight: bold;">Ingredients</span>
-            <ul>
-            <li>1 ripe avocado</li>
-            <li>350 g mixed-colour cherry tomatoes</li>
-            <li>100 g baby spinach</li>
-            <li>3 spring onions</li>
-            <li>½ a bunch of fresh coriander, (15g)</li>
-            <li>1 lime</li>
-            <li>extra virgin olive oil</li>
-            <li>1 large free-range egg</li>
-            <li>1 mug of self-rising flour</li>
-            <li>1 mug of semi-skimmed milk</li>
-            <li>olive oil</li>
-            <li>300 g cottage cheese</li>
-            <li>hot chilli sauce</li>
-            </ul>
-
-            <span style="font-weight: bold;">Method</span>
-            <ol>
-              <li>Halve, destone, peel and finely slice the avocado and quarter the tomatoes, then place in a salad bowl with a quarter of the spinach.</li>
-              <li>Trim, finely slice and add the spring onions and pick in the coriander leaves, then squeeze over the lime juice.</li>
-              <li>Drizzle with 1 tablespoon of extra virgin olive oil, season to perfection with sea salt and black pepper, toss to coat and put aside.</li>
-              <li>Crack the egg into a blender, add the flour, milk, remaining spinach and a pinch of salt and pepper, then blitz until smooth.</li>
-              <li>Place a large non-stick frying pan on a medium heat, rub the pan with a little olive oil, then pour in a thin layer of batter, swirling it up and around the edges. Cook on one side only for 2 minutes, or until lightly golden, then stack up on a serving plate and repeat.</li>
-              <li>Top each pancake with dollops of cottage cheese, the avocado salad, and a few good shakes of chilli sauce. Really nice served with extra lime wedges for squeezing over, and a fried egg on top, if you fancy.</li>
-
-            </ol>
-          </div>
-        </div>
-
-        <div class="card">
-          <a>
-            <img src="A/a4.jpg" alt="a4">
-            <div class="dishName">Smokey chorizo Salmon</div>
-          </a>
-          <div class="hideInfo">
-            <span style="font-weight: bold;">Ingredients</span>
-            <ul>
-              <li>2 x 150 g salmon fillets , skin on, scaled, pin-boned, from sustainable sources</li>
-              <li>300 g ripe mixed-colour cherry tomatoes</li>
-              <li>4 sprigs of fresh basil</li>
-              <li>8 black olives , (stone in)</li>
-              <li>30 g higher-welfare chorizo</li>
-            </ul>
-
-            <span style="font-weight: bold;">Method</span>
-            <ol>
-              <li>Put the salmon flesh side down in a large cold non-stick frying pan and place on a medium-high heat.</li>
-              <li>As the pan comes up to temperature and the salmon begins to sizzle (about 3 minutes), flip it over and cook on the skin side for 5 minutes, or until very crisp and just cooked (depending on its thickness).</li>
-              <li>Meanwhile, halve the cherry tomatoes, tear up most of the basil leaves, then toss it all with 1 tablespoon of red wine vinegar and a pinch of sea salt and black pepper.</li>
-              <li>Squash the olives and discard the stones, then finely chop the flesh. Mix with 1 teaspoon of extra virgin olive oil and a splash of water.</li>
-              <li>Finely slice the chorizo, add to the pan for the last 2 minutes, then toss in the dressed tomatoes for 30 seconds.</li>
-              <li>Divide between your plates, with the salmon on top. Spoon over the dressed olives and pick over the remaining basil.</li>
-            </ol>
-          </div>
-        </div>
-
-        <div class="card">
-          <a>
-            <img src="A/a5.jpg" alt="a5">
-            <div class="dishName">Smokey chorizo Salmon</div>
-          </a>
-          <div class="hideInfo">
-            <span style="font-weight: bold;">Ingredients</span>
-            <ul>
-              <li>2 x 150 g salmon fillets , skin on, scaled, pin-boned, from sustainable sources</li>
-              <li>300 g ripe mixed-colour cherry tomatoes</li>
-              <li>4 sprigs of fresh basil</li>
-              <li>8 black olives , (stone in)</li>
-              <li>30 g higher-welfare chorizo</li>
-            </ul>
-
-            <span style="font-weight: bold;">Method</span>
-            <ol>
-              <li>Put the salmon flesh side down in a large cold non-stick frying pan and place on a medium-high heat.</li>
-              <li>As the pan comes up to temperature and the salmon begins to sizzle (about 3 minutes), flip it over and cook on the skin side for 5 minutes, or until very crisp and just cooked (depending on its thickness).</li>
-              <li>Meanwhile, halve the cherry tomatoes, tear up most of the basil leaves, then toss it all with 1 tablespoon of red wine vinegar and a pinch of sea salt and black pepper.</li>
-              <li>Squash the olives and discard the stones, then finely chop the flesh. Mix with 1 teaspoon of extra virgin olive oil and a splash of water.</li>
-              <li>Finely slice the chorizo, add to the pan for the last 2 minutes, then toss in the dressed tomatoes for 30 seconds.</li>
-              <li>Divide between your plates, with the salmon on top. Spoon over the dressed olives and pick over the remaining basil.</li>
-            </ol>
-          </div>
-        </div>
-
-
       </div>
+      
     </div>
 
     <div id = "Section2Div" style="display:none;">
@@ -246,10 +449,10 @@
     <div id="About">
       <span>About us:</span>
       <p>
-        Our website provides you with the most mouth-watering and appetizing<br>
-        dishes to fill your stomach. We have selections from the Appetizer, Entrée, Desserts and our featured tab.<br>
-        If you wish, you can also use the searchbar to find dishes of your preference.<br> 
-        Engage with our community tab and comment about what you think!<br>
+        Chef’s Corner is a unique website that connects users to the power and joy of food. The site strives to be users' best friend in food and is committed to leading by teaching, inspiring and empowering through its talent and expertise.<br>
+        Our website provides you with the most mouth-watering and appetizing
+        dishes to satisfy your each and every craving.<br>
+        Feel free to visit the comment section and let us know what other recipes you may be interested in seeing!<br>
         Bon Appetit!
       </p>
     </div>

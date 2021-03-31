@@ -298,22 +298,31 @@ footer > div > div{
 
 #featured{
   color: white;
-  display:flex;
+  display: flex;
   font-weight: bold;
   text-align: center;
-  padding-top: 1em;
-  padding-bottom: 1em;
   height: auto;
   font-size: 3.5vmin; 
-  width: 94.5vw;
-  margin: 0 auto;
+  width: 95vw;
+  margin: 1em auto;
 }
 
 #featured a{
+  display: flex;
   width: 25%;
+  margin: 0 5px;
   transition: background-color 750ms ease, color 250ms ease;
   text-decoration: none;
   color: white;
+  height: 6vh;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid cadetblue;
+}
+
+#featured a.featured-active {
+  background-color: white;
+  color: black;
 }
 
 #featured a:hover{
@@ -323,72 +332,198 @@ footer > div > div{
 
 #Section1Div{
   width: 94.5vw;
-  height: 60vh;
-  padding: 0;
-  margin: 10px auto;
-  background: rgb(233,84,9);
-  background: linear-gradient(0deg, rgba(233,84,9,1) 0%, rgba(255,255,255,1) 100%);
+  height: 70vh;
+  padding: 2.5vh 0;
+  margin: 2.5vh auto;
+  border: 2px solid cadetblue;
+  overflow: hidden;
+  position: relative;
 }
 
 #Section2Div{
   width: 94.5vw;
-  height: 60vh;
-  padding: 0;
-  margin: 10px auto;
-  background: rgb(145,17,63);
-  background: linear-gradient(0deg, rgba(145,17,63,1) 0%, rgba(255,255,255,1) 100%);
+  height: 70vh;
+  padding: 2.5vh 0;
+  margin: 2.5vh auto;
+  border: 2px solid cadetblue;
+  overflow: hidden;
+  position: relative;
 }
 
 #Section3Div{
   width: 94.5vw;
-  height: 60vh;
-  padding: 0;
-  margin: 10px auto;
-  background: rgb(5,39,158);
-  background: linear-gradient(0deg, rgba(5,39,158,1) 0%, rgba(255,255,255,1) 100%);
+  height: 70vh;
+  padding: 2.5vh 0;
+  margin: 2.5vh auto;
+  border: 2px solid cadetblue;
+  overflow: hidden;
+  position: relative;
 }
 
 #Section4Div{
   width: 94.5vw;
-  height: 60vh;
-  padding: 0;
-  margin: 10px auto;
-  background: rgb(44,152,4);
-  background: linear-gradient(0deg, rgba(44,152,4,1) 0%, rgba(255,255,255,1) 100%);
+  height: 70vh;
+  padding: 2.5vh 0;
+  margin: 2.5vh auto;
+  border: 2px solid cadetblue;
+  overflow: hidden;
+  position: relative;
 }
 
 .hideInfo {
   display: none;
   overflow: hidden;
-  max-height: 0;
-  transition: max-height 2s ease;
+  transform: translateY(0);
+}
+
+.rolldown{
+  padding: 1em;
+  display: block;
+  background-color: white;
+  overflow-y: auto;
+  z-index: 10;
+  position: absolute;
+  bottom: 0;
+  animation-name: rollDown;
+  animation-fill-mode: forwards;
+  animation-duration: 200ms;
+  animation-iteration-count: 1;
+  animation-timing-function: linear; 
 }
 
 .showInfo {
-  max-height: 100%;
-  position: relative;
-  bottom: 0;
   padding: 1em;
   background-color: white;
   display: block;
   overflow-y: auto;
-  transform: translateY(-100%);
   z-index: 10;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(0);
+  animation-name: riseUp;
+  animation-fill-mode: forwards;
+  animation-duration: 200ms;
+  animation-iteration-count: 1;
+  animation-timing-function: linear; 
+  max-height: 0;
+}
+
+@keyframes riseUp{
+  0%{
+    max-height: 0;
+  }
+  100%{
+    max-height: 100%;
+  }
+}
+
+@keyframes rollDown{
+  0%{
+    display: block;
+    max-height: 100%;
+  }
+  100%{
+    max-height: 0;
+    display: none;
+  }
 }
 
 .container {
-  display: flex;
-  width: 80%;
+  width: 85vw;
   height: 100%;
   margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+}
+
+ .slider {
+  display: flex;
+  height: 100%;
+  flex-shrink: 0;
+  margin: 0 auto;
+  position: relative;
+  transition: transform 1000ms ease;
+}
+
+#Section1Div .slider {
+  width: 366.67%;
+}
+
+#Section2Div .slider {
+  display: flex;
+  height: 100%;
+  width: 300%;
+  flex-shrink: 0;
+  margin: 0 auto;
+  position: relative;
+  transition: transform 1000ms ease;
+}
+
+#Section3Div .slider {
+  display: flex;
+  height: 100%;
+  width: 300%;
+  flex-shrink: 0;
+  margin: 0 auto;
+  position: relative;
+  transition: transform 1000ms ease;
+}
+
+#Section4Div .slider {
+  display: flex;
+  height: 100%;
+  width: 300%;
+  flex-shrink: 0;
+  margin: 0 auto;
+  position: relative;
+  transition: transform 1000ms ease;
+}
+
+.nav button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  background-color: cadetblue;
+  height: 8vmin;
+  width: 8vmin;
+  font-size: 2.5em;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: filter 500ms ease;
+  outline: none;
+}
+
+.nav button:hover {
+  filter: brightness(0.8);
+}
+
+.nav .next {
+  right: 5px;
+}
+
+.nav .prev {
+  left: 5px;
 }
 
 .card {
   position: relative;
+  display: flex;
+  flex-direction: column;
   height: 100%;
-  width: 25%;
-  margin: 0 2vw;
+  margin: 0 2.5vw;
   cursor: pointer;
+  flex-shrink: 0;
+  flex: 33.3;
 }
 
 .card a {
