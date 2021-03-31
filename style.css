@@ -461,7 +461,7 @@ footer > div > div{
   margin: 0 auto;
   position: relative;
   transition: transform 1000ms ease;
-  width: 100%;
+  width: 200%;
 }
 
 #Section3Div .slider {
