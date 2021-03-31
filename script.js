@@ -268,7 +268,7 @@ nextS4.addEventListener('click', function(){
   if (s4direction === 1){
     s4direction = -1;
     carouselS4.style.justifyContent = "flex-start";
-    sliderS4.style.transform = "translate(-8.33%)";
+    sliderS4.style.transform = "translate(-12.5%)";
     sliderS4.prepend(sliderS4.lastElementChild);
     sliderS4.prepend(sliderS4.lastElementChild);
     sliderS4.prepend(sliderS4.lastElementChild);
@@ -276,7 +276,7 @@ nextS4.addEventListener('click', function(){
   else {
     s4direction = -1;
     carouselS4.style.justifyContent = "flex-start";
-    sliderS4.style.transform = "translate(-8.33%)";
+    sliderS4.style.transform = "translate(-12.5%)";
   }  
 });
 
@@ -284,7 +284,7 @@ prevS4.addEventListener('click', function(){
   if (s4direction === -1){
     s4direction = 1;
     carouselS4.style.justifyContent = "flex-end";
-    sliderS4.style.transform = "translate(8.33%)";
+    sliderS4.style.transform = "translate(12.5%)";
     sliderS4.appendChild(sliderS4.firstElementChild);
     sliderS4.appendChild(sliderS4.firstElementChild);
     sliderS4.appendChild(sliderS4.firstElementChild);
@@ -292,7 +292,7 @@ prevS4.addEventListener('click', function(){
   else {
     s4direction = 1;
     carouselS4.style.justifyContent = "flex-end";
-    sliderS4.style.transform = "translate(8.33%)";
+    sliderS4.style.transform = "translate(12.5%)";
   }
 });
 
