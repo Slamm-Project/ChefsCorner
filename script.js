@@ -95,6 +95,7 @@ document.querySelectorAll('.card').forEach(div => {
   });
 });
 
+//  Code for Appetizer Slider
 const prevS1 = document.getElementById("Section1Div").querySelector('.prev');
 const nextS1 = document.getElementById("Section1Div").querySelector('.next');
 const carouselS1 = document.getElementById("Section1Div").querySelector('.carousel');
@@ -145,5 +146,59 @@ sliderS1.addEventListener('transitionend', function(){
   sliderS1.style.transform = "translate(0)";
   setTimeout(function(){
     sliderS1.style.transition = "transform 1000ms ease";
+  });
+});
+
+//  Code for Entree Slider
+const prevS2 = document.getElementById("Section2Div").querySelector('.prev');
+const nextS2 = document.getElementById("Section2Div").querySelector('.next');
+const carouselS2 = document.getElementById("Section2Div").querySelector('.carousel');
+const sliderS2 = document.getElementById("Section2Div").querySelector('.slider');
+let s2direction = -1;
+
+nextS2.addEventListener('click', function(){
+  if (s2direction === 1){
+    s2direction = -1;
+    carouselS2.style.justifyContent = "flex-start";
+    sliderS2.style.transform = "translate(-8.33%)";
+    sliderS2.prepend(sliderS2.lastElementChild);
+    sliderS2.prepend(sliderS2.lastElementChild);
+    sliderS2.prepend(sliderS2.lastElementChild);
+  }
+  else {
+    s1direction = -1;
+    carouselS2.style.justifyContent = "flex-start";
+    sliderS2.style.transform = "translate(-8.33%)";
+  }  
+});
+
+prevS2.addEventListener('click', function(){
+  if (s2direction === -1){
+    s2direction = 1;
+    carouselS2.style.justifyContent = "flex-end";
+    sliderS2.style.transform = "translate(8.33%)";
+    sliderS2.appendChild(sliderS2.firstElementChild);
+    sliderS2.appendChild(sliderS2.firstElementChild);
+    sliderS2.appendChild(sliderS2.firstElementChild);
+  }
+  else {
+    s2direction = 1;
+    carouselS2.style.justifyContent = "flex-end";
+    sliderS2.style.transform = "translate(8.33%)";
+  }
+});
+
+sliderS2.addEventListener('transitionend', function(){
+  if (s2direction === -1){
+    sliderS2.appendChild(sliderS2.firstElementChild);
+  }
+  else if (s2direction === 1){
+    sliderS2.prepend(sliderS2.lastElementChild);
+  }
+  
+  sliderS2.style.transition = "none";
+  sliderS2.style.transform = "translate(0)";
+  setTimeout(function(){
+    sliderS2.style.transition = "transform 1000ms ease";
   });
 });
