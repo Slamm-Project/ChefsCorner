@@ -330,41 +330,11 @@ footer > div > div{
   color: black;
 }
 
-#Section1Div{
+#Section1Div, #Section2Div, #Section3Div, #Section4Div {
   width: 94.5vw;
   height: 70vh;
   padding: 2.5vh 0;
-  margin: 2.5vh auto;
-  border: 2px solid cadetblue;
-  overflow: hidden;
-  position: relative;
-}
-
-#Section2Div{
-  width: 94.5vw;
-  height: 70vh;
-  padding: 2.5vh 0;
-  margin: 2.5vh auto;
-  border: 2px solid cadetblue;
-  overflow: hidden;
-  position: relative;
-}
-
-#Section3Div{
-  width: 94.5vw;
-  height: 70vh;
-  padding: 2.5vh 0;
-  margin: 2.5vh auto;
-  border: 2px solid cadetblue;
-  overflow: hidden;
-  position: relative;
-}
-
-#Section4Div{
-  width: 94.5vw;
-  height: 70vh;
-  padding: 2.5vh 0;
-  margin: 2.5vh auto;
+  margin: 5vh auto;
   border: 2px solid cadetblue;
   overflow: hidden;
   position: relative;
@@ -462,23 +432,11 @@ footer > div > div{
 }
 
 #Section3Div .slider {
-  display: flex;
-  height: 100%;
-  width: 300%;
-  flex-shrink: 0;
-  margin: 0 auto;
-  position: relative;
-  transition: transform 1000ms ease;
+  width: 400%;
 }
 
 #Section4Div .slider {
-  display: flex;
-  height: 100%;
-  width: 300%;
-  flex-shrink: 0;
-  margin: 0 auto;
-  position: relative;
-  transition: transform 1000ms ease;
+  width: 200.67%;
 }
 
 .card {

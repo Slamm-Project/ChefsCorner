@@ -202,3 +202,111 @@ sliderS2.addEventListener('transitionend', function(){
     sliderS2.style.transition = "transform 1000ms ease";
   });
 });
+
+//  Code for Dessert Slider
+const prevS3 = document.getElementById("Section3Div").querySelector('.prev');
+const nextS3 = document.getElementById("Section3Div").querySelector('.next');
+const carouselS3 = document.getElementById("Section3Div").querySelector('.carousel');
+const sliderS3 = document.getElementById("Section3Div").querySelector('.slider');
+let s3direction = -1;
+
+nextS3.addEventListener('click', function(){
+  if (s3direction === 1){
+    s3direction = -1;
+    carouselS3.style.justifyContent = "flex-start";
+    sliderS3.style.transform = "translate(-8.33%)";
+    sliderS3.prepend(sliderS3.lastElementChild);
+    sliderS3.prepend(sliderS3.lastElementChild);
+    sliderS3.prepend(sliderS3.lastElementChild);
+  }
+  else {
+    s3direction = -1;
+    carouselS3.style.justifyContent = "flex-start";
+    sliderS3.style.transform = "translate(-8.33%)";
+  }  
+});
+
+prevS3.addEventListener('click', function(){
+  if (s3direction === -1){
+    s3direction = 1;
+    carouselS3.style.justifyContent = "flex-end";
+    sliderS3.style.transform = "translate(8.33%)";
+    sliderS3.appendChild(sliderS3.firstElementChild);
+    sliderS3.appendChild(sliderS3.firstElementChild);
+    sliderS3.appendChild(sliderS3.firstElementChild);
+  }
+  else {
+    s3direction = 1;
+    carouselS3.style.justifyContent = "flex-end";
+    sliderS3.style.transform = "translate(8.33%)";
+  }
+});
+
+sliderS3.addEventListener('transitionend', function(){
+  if (s3direction === -1){
+    sliderS3.appendChild(sliderS3.firstElementChild);
+  }
+  else if (s3direction === 1){
+    sliderS3.prepend(sliderS3.lastElementChild);
+  }
+  
+  sliderS3.style.transition = "none";
+  sliderS3.style.transform = "translate(0)";
+  setTimeout(function(){
+    sliderS3.style.transition = "transform 1000ms ease";
+  });
+});
+
+//  Code for Drink Slider
+const prevS4 = document.getElementById("Section4Div").querySelector('.prev');
+const nextS4 = document.getElementById("Section4Div").querySelector('.next');
+const carouselS4 = document.getElementById("Section4Div").querySelector('.carousel');
+const sliderS4 = document.getElementById("Section4Div").querySelector('.slider');
+let s4direction = -1;
+
+nextS4.addEventListener('click', function(){
+  if (s4direction === 1){
+    s4direction = -1;
+    carouselS4.style.justifyContent = "flex-start";
+    sliderS4.style.transform = "translate(-8.33%)";
+    sliderS4.prepend(sliderS4.lastElementChild);
+    sliderS4.prepend(sliderS4.lastElementChild);
+    sliderS4.prepend(sliderS4.lastElementChild);
+  }
+  else {
+    s4direction = -1;
+    carouselS4.style.justifyContent = "flex-start";
+    sliderS4.style.transform = "translate(-8.33%)";
+  }  
+});
+
+prevS4.addEventListener('click', function(){
+  if (s4direction === -1){
+    s4direction = 1;
+    carouselS4.style.justifyContent = "flex-end";
+    sliderS4.style.transform = "translate(8.33%)";
+    sliderS4.appendChild(sliderS4.firstElementChild);
+    sliderS4.appendChild(sliderS4.firstElementChild);
+    sliderS4.appendChild(sliderS4.firstElementChild);
+  }
+  else {
+    s4direction = 1;
+    carouselS4.style.justifyContent = "flex-end";
+    sliderS4.style.transform = "translate(8.33%)";
+  }
+});
+
+sliderS4.addEventListener('transitionend', function(){
+  if (s4direction === -1){
+    sliderS4.appendChild(sliderS4.firstElementChild);
+  }
+  else if (s4direction === 1){
+    sliderS4.prepend(sliderS4.lastElementChild);
+  }
+  
+  sliderS4.style.transition = "none";
+  sliderS4.style.transform = "translate(0)";
+  setTimeout(function(){
+    sliderS4.style.transition = "transform 1000ms ease";
+  });
+});
