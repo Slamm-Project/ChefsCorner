@@ -14,11 +14,6 @@ body, html {
 
 body {
   background-color: black;
-  //opacity: 0;
-}
-
-body.loaded {
-  opacity: 1;
 }
 
 header {
@@ -147,8 +142,8 @@ header > form input {
   color: white;
 
   opacity: 0;
-  animation: fadeOutAnimation ease 3.5s;
-  animation-delay: 2s;
+  animation: fadeOutAnimation ease 4s;
+  animation-delay: 2.5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
@@ -183,7 +178,7 @@ footer {
   padding: 0;
   height: 30vh;
   width: 100vw;
-  background-color: black;
+  background-color: cadetblue;
   color: white;
   font-size: 1em;
   flex-direction: column;
@@ -304,7 +299,7 @@ footer > div > div{
 }
 
 #featuredHeader {
-  margin: 1em auto;
+  margin: 0.25em auto;
   width: 94.5vw;
   color: white;
   font-size: 2em;
@@ -364,6 +359,7 @@ footer > div > div{
 
 .rolldown{
   padding: 1em;
+  font-size: 2.25vmin;
   display: block;
   background-color: white;
   overflow-y: auto;
@@ -430,6 +426,7 @@ footer > div > div{
   position: relative;
   display: flex;
   justify-content: flex-start;
+  flex-shrink: 0;
 }
 
 .slider {
