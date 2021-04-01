@@ -14,10 +14,15 @@ body, html {
 
 body {
   background-color: black;
+  //opacity: 0;
+}
+
+body.loaded {
+  opacity: 1;
 }
 
 header {
-  display: inline-flex;
+  display: flex;
   height: 10vh;
   background-color: black;
   width: 100%;
@@ -26,7 +31,8 @@ header {
 
 header > img {
   margin-left: 2vw;
-  height: 75%;
+  height: 100%;
+  width: auto;
 }
 
 header > a {
@@ -76,20 +82,20 @@ header > form input {
 }
 
 #About{
+  display: block;
   color: white;
   font-weight: bold;
   background-color: cadetblue;
   text-align: center;
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding: 1em;
   height: auto;
-  font-size: 2.5vmin; 
+  font-size: 1em; 
   width: 94.5vw;
   margin: 0 auto;
 }
 
 #About span{
-  font-size: 5vmin;
+  font-size: 1.5em;
 }
 
 #HomeBG {
@@ -179,7 +185,7 @@ footer {
   width: 100vw;
   background-color: black;
   color: white;
-  font-size: 2.5vh;
+  font-size: 1em;
   flex-direction: column;
   justify-content: center;
 }
@@ -207,7 +213,9 @@ footer > div > div{
 }
 
 #SMicon {
-  height: 70%;
+  width: 70%;
+  max-width: 8em;
+  height: auto;
 }
 
 #commentsection{
@@ -222,7 +230,7 @@ footer > div > div{
 #commentform{
   display: flex;
   flex-direction: column;
-  font-size: 2.5vh;
+  font-size: 3vh;
 }
 
 #commentsection label{
@@ -295,6 +303,15 @@ footer > div > div{
   }
 }
 
+#featuredHeader {
+  margin: 1em auto;
+  width: 94.5vw;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  background-image: url();
+}
+
 #featured{
   color: white;
   display: flex;
@@ -331,7 +348,7 @@ footer > div > div{
 
 #Section1Div, #Section2Div, #Section3Div, #Section4Div {
   width: 94.5vw;
-  height: 70vh;
+  height: 80vh;
   padding: 2.5vh 0;
   margin: 5vh auto;
   border: 2px solid cadetblue;
@@ -362,6 +379,7 @@ footer > div > div{
 
 .showInfo {
   padding: 1em;
+  font-size: 2.25vmin;
   background-color: white;
   display: block;
   overflow-y: auto;
@@ -399,7 +417,7 @@ footer > div > div{
 }
 
 .container {
-  width: 85vw;
+  width: 90vw;
   height: 100%;
   margin: 0 auto;
   overflow: hidden;
@@ -447,7 +465,7 @@ footer > div > div{
   margin: 0 2.5vw;
   cursor: pointer;
   flex-shrink: 0;
-  flex: 33.3;
+  flex: 1;
 }
 
 .card a {
@@ -460,6 +478,7 @@ footer > div > div{
   display: block;
   height: 90%;
   width: 100%;
+  min-width: 80%;
 }
 
 .dishName {
@@ -467,8 +486,9 @@ footer > div > div{
   width: 100%;
   background-color: rgb(30,30,30);
   color: white;
+  font-size: 2.25vmin;
   font-weight: bold;
-  padding-top: 5%;
+  padding-top: 2.5vh;
   text-align: center; 
 }
 
@@ -486,6 +506,7 @@ footer > div > div{
   cursor: pointer;
   transition: filter 500ms ease;
   outline: none;
+  object-position: center; 
 }
 
 .nav button:hover {
@@ -498,4 +519,12 @@ footer > div > div{
 
 .nav .prev {
   left: 5px;
+}
+
+@media screen and (min-width: 1200px) {
+
+}
+
+@media screen and (min-width: 768px) {
+
 }
