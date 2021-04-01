@@ -1,29 +1,35 @@
-//document.onload(function(){
-  document.querySelectorAll('.card').forEach(img => {
-    img.classList.add('lazyload');
-  });
-//});
+// document.onload(function(){
+//   document.querySelectorAll('.card').forEach(img => {
+//     img.classList.add('lazyload');
+//   });
+// });
 
 let images = ['images/h1.jpeg','images/h2.jpeg','images/h3.jpeg','images/h4.jpeg','images/h6.jpeg','images/h7.jpeg','images/h8.jpeg','images/h9.jpeg'];
 
+let trial = new Array();
+
 function preloader(){
-  for (let img of images){
-    let img = new Image();
-    img.src = image.src;
+  for (let image of images){
+    let img = new Image(1000,1000);
+    img = image;
+    trial.push(img);
   }
+  return trial;
 }
 
-console.log(images.length);
+trial = preloader();
+
+console.log(trial);
 
 let index = -1;
 showSlides();
 function showSlides(){
   index++;
-  if (index + 1 > images.length){
+  if (index + 1 > trial.length){
     index = 0;
   }
   
-  document.getElementById("HomeBG").style.backgroundImage = "url("+images[index]+")";
+  document.getElementById("HomeBG").style.backgroundImage = "url("+trial[index]+")";
   document.getElementById("HomeBG").style.backgroundSize = "cover";
   document.getElementById("HomeBG").style.backgroundPosition = "center top";
   document.getElementById("HomeBG").classList.add("animate");
