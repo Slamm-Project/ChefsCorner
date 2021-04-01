@@ -1,8 +1,8 @@
-// window.onbeforeunload(function(){
-//   document.querySelector('#featured').querySelectorAll('.card').forEach(img => {
-
-//   });
-// });
+//document.onload(function(){
+  document.querySelectorAll('.card').forEach(img => {
+    img.classList.add('lazyload');
+  });
+//});
 
 let images = ['images/h1.jpeg','images/h2.jpeg','images/h3.jpeg','images/h4.jpeg','images/h6.jpeg','images/h7.jpeg','images/h8.jpeg','images/h9.jpeg'];
 
@@ -12,6 +12,8 @@ function preloader(){
     img.src = image.src;
   }
 }
+
+console.log(images.length);
 
 let index = -1;
 showSlides();
