@@ -330,8 +330,14 @@ sliderS4.addEventListener('transitionend', function(){
 });
 
 //Code for API
-const domain = "https://api.spoonacular.com/recipes/";
 const apiKey = "7806e858e7fd4ff48623955a8a5cd984";
+const domain = "https://api.spoonacular.com/recipes/?apiKey=" + apiKey + "&instructionsRequired=true&number=60";
+const searchBar = document.getElementById("searchbar");
+
+searchBar.addEventListener('submit', (event) => {
+  let searchValue = event.target.value;
+  getRecipes(searchValue);
+});
 
 async function sendRequest(url, method, data){
   const options = {method};
@@ -345,7 +351,11 @@ async function sendRequest(url, method, data){
   return response.json();
 }
 
-async function getRecipes(){
-  let recipes = await sendRequest(domain, 'GET');
+async function getRecipes(searchValue){
+  let recipes = await sendRequest(domain + "&query=" + searchValue, 'GET');
+  displayRecipes(recipes);
+}
 
+function displayRecipes(recipes){
+  
 }
