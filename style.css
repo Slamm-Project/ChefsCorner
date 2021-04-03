@@ -23,58 +23,77 @@ header {
   background-color: black;
   width: 100%;
   align-items: center;
+  position: relative;
 }
 
 header > img {
-  margin-left: 2vw;
-  height: 100%;
-  width: auto;
+  margin: auto;
+  height: auto;
+  max-height: 100%;
+  max-width: 70%;
 }
 
-header > a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 10vw;
-  height: 100%;
-  padding-left: auto;
-  padding-right: auto;
-  margin-left: 2vw;
-  text-decoration: none;
-  color: white;
-}
-
-header > a span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 80%;
-  width: 100%;
-  transition: background-color 750ms linear, color 250ms linear;
-  border-radius: 3px;
-  font-size: 1.2em;
-}
-
-header > a span:hover {
+.navi div {
+  height: 3px;
   background-color: white;
-  color: black;
+  margin: 5px 0;
+  border-radius: 25px;
+  transition: all 300ms ease;
 }
 
-header > form {
-  display: flex;
-  margin-left: 2vw;
-  margin-right: 2vw;
-  height: 100%;
+.navi {
+  display: block;
   width: auto;
-  justify-content: left;
-  align-items: center;
-  flex-grow: 1;
+  position: absolute;
+  top: 50%;
+  left: 2%;
+  transform: translateY(-50%);
+  transition: all 300ms ease;
+  border-radius: 5px;
+  padding: 0 5px;
 }
 
-header > form input {
-  height: 50%;
-  flex-grow: 1;
-  border-radius: 3px;
+.one {
+  width: 25px;
+}
+
+.two {
+  width: 15px;
+}
+
+.three {
+  width: 20px;
+}
+
+.navi:hover div{
+  width: 20px;
+  background-color: black;
+}
+
+.navi:hover {
+  background-color: white;
+}
+
+.fa.fa-search {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 25px;
+  position: absolute;
+  top: 50%;
+  right: 2%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  transition: background-color 750ms linear, color 250ms linear;
+}
+
+.fa.fa-search:hover {
+  color: black;
+  background-color: white;
 }
 
 #searchResultArea {
@@ -134,8 +153,13 @@ header > form input {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 50%;
-  height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  max-height: 55%;
   text-align: center;
 
   background-image: url('images/banner.png');
@@ -143,11 +167,7 @@ header > form input {
   background-repeat: no-repeat;
   background-size: contain;
 
-  position: fixed;
-  top: 25%;
-  left: 25%;
-
-  font-size: 1.8vw;
+  font-size: 3vh;
   color: white;
 
   opacity: 0;
@@ -173,19 +193,11 @@ header > form input {
   }
 }
 
-#welcome span {
-  margin-top: 2em;
-}
-
-#welcome p {
-  width: 50%;
-}
-
 footer {
   display: flex;
   margin: 0;
   padding: 0;
-  height: 30vh;
+  height: auto;
   width: 100vw;
   background-color: cadetblue;
   color: white;
@@ -311,7 +323,7 @@ footer > div > div{
   margin: 0.25em auto;
   width: 94.5vw;
   color: white;
-  font-size: 2em;
+  font-size: max(min(1.25em), 3vw);
   text-align: center;
   background-image: url();
 }
@@ -322,7 +334,7 @@ footer > div > div{
   font-weight: bold;
   text-align: center;
   height: auto;
-  font-size: 3.5vmin; 
+  font-size: max(min(1.1em), 3.5vmin); 
   width: 95vw;
   margin: 1em auto;
 }
@@ -334,7 +346,7 @@ footer > div > div{
   transition: background-color 750ms ease, color 250ms ease;
   text-decoration: none;
   color: white;
-  height: 6vh;
+  height: max(min(1.2em), 6vh);
   justify-content: center;
   align-items: center;
   border: 2px solid cadetblue;
@@ -368,7 +380,6 @@ footer > div > div{
 
 .rolldown{
   padding: 1em;
-  font-size: 2.25vmin;
   display: block;
   background-color: white;
   overflow-y: auto;
@@ -384,7 +395,6 @@ footer > div > div{
 
 .showInfo {
   padding: 1em;
-  font-size: 2.25vmin;
   background-color: white;
   display: block;
   overflow-y: auto;
@@ -492,10 +502,10 @@ footer > div > div{
   width: 100%;
   background-color: rgb(30,30,30);
   color: white;
-  font-size: 2.25vmin;
   font-weight: bold;
-  padding-top: 2.5vh;
-  text-align: center; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav button {
@@ -522,17 +532,54 @@ footer > div > div{
 }
 
 .nav .next {
+  position: absolute;
   right: 5px;
 }
 
 .nav .prev {
+  position: absolute;
   left: 5px;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 1900px) {
+  .nav {
+    display: none;
+  }
 
+  .container {
+    overflow-y: auto;
+  }
+
+  .carousel, .slider {
+    display: inline;
+  }
+
+  .slider {
+    scroll-snap-type: y mandatory;
+  }
+
+  .card {
+    width: 20em;
+    margin: 1em auto;
+    scroll-snap-align: start; 
+  }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 400px) {
+  #featured, #featured a{
+    display: block;
+    width: 99%;
+    margin: 0.5em auto;
+  }
+}
 
+@media screen and (max-width: 300px) {
+  .card {
+    width: 15em;
+    margin: 0 auto;
+  }
+
+  #Section1Div, #Section2Div, #Section3Div, #Section4Div {
+    height: 65vh;
+  }
 }

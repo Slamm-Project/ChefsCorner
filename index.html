@@ -21,6 +21,7 @@
 	<link href="style.css" rel="stylesheet" type="text/css" />
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <script>
@@ -45,26 +46,17 @@
   
 	<header>
 		<img src="images/Name.jpeg" alt="SiteName">
-      <a href="#featuredHeader">
-        <span>Featured</span>
-      </a>
-      <a href="#Contact">
-        <span>Contact</span>
-      </a>
-      <form action="#"onsubmit="return false;">
-        <label for="searchbar"></label>
-        <input type="text" id="searchbar" name="searchbar" placeholder="Search...">
-      </form>
-    </header>
+    <a href="#" class="navi">
+      <div class="one"></div>
+      <div class="two"></div>
+      <div class="three"></div>
+    </a>
+    <i class="fa fa-search"></i>
+  </header>
 
-    <div id="searchResultArea">hellow</div>
+    <div id="searchResultArea"></div>
 
-    <div id="welcome">
-      <span>Welcome to Chef's Corner!</span>
-      <p>
-        Here you can find some of the best recipes to satisfy your cravings!
-      </p>
-   </div>
+    <div id="welcome"></div>
 
    <section id="HomeBG"></section>
 
@@ -1609,8 +1601,7 @@
           <img id="SMicon" src="images/SocialMediaIcons.png" alt="Social Media Links">
         </div>
         <div>
-          Project Contributors: <br><br>
-
+          <b>Project Contributors:</b>
           Shivan Maharaj <br>
           Lydia Boucher <br> 
           Amanda Lalman <br>
