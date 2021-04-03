@@ -1,4 +1,4 @@
-window.addEventListener('beforeload', preloader);
+window.addEventListener('onload', preloader);
 
 let index = -1;
 showSlides();
@@ -313,8 +313,6 @@ sliderS4.addEventListener('transitionend', function(){
 });
 
 //Code for API
-const apiKey = "7806e858e7fd4ff48623955a8a5cd984";
-const domain = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&instructionsRequired=true&number=60`;
 const searchBar = document.getElementById('searchbar');
 
 searchBar.addEventListener('keyup', function(event){
@@ -325,6 +323,12 @@ searchBar.addEventListener('keyup', function(event){
     console.log(searchValue);
   }
 });
+
+const apiKey = "7806e858e7fd4ff48623955a8a5cd984";
+const domain = "https://api.spoonacular.com/recipes/";
+const additionalRequest = `&apiKey=${apiKey}&instructionsRequired=true&number=21`;
+
+
 
 async function sendRequest(url, method, data){
   const options = {method};
@@ -339,11 +343,27 @@ async function sendRequest(url, method, data){
 }
 
 async function getRecipes(searchValue){
-  let recipes = await sendRequest(`${domain}&query=${searchValue}`, 'GET');
+  let recipes = await sendRequest(`${domain}complexSearch?query=${searchValue+additionalRequest}`, 'GET');
   displayRecipes(recipes);
-  console.log(recipes);
+  let ids = [];
+  let idList = "";
+  for (let result of recipes.results){
+    ids.push(result.id);
+  }
+  for (let i = 0; i < ids.length; i++){
+    if (i !== ids.length-1){
+      idList += `${ids[i]},`;
+    }
+    else {
+      idList += ids[i];
+    }
+  }
+
+  let idBulkInfo = await sendRequest(`${domain}informationBulk?ids=${idList+additionalRequest}`);
+  console.log(idBulkInfo[0]);
 }
 
 function displayRecipes(recipes){
-
+  let html = "";
+  let searchResultArea = document.getElementById('');
 }
