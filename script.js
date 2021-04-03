@@ -1,21 +1,4 @@
-
-
-let images = ['images/h1.jpeg','images/h2.jpeg','images/h3.jpeg','images/h4.jpeg','images/h6.jpeg','images/h7.jpeg','images/h8.jpeg','images/h9.jpeg'];
-
-let trial = new Array();
-
-function preloader(){
-  for (let image of images){
-    let img = new Image(2000,2000);
-    img = image;
-    trial.push(img);
-  }
-  return trial;
-}
-
-document.addEventListener("DOMContentLoaded", preloader);
-
-trial = preloader();
+window.addEventListener('beforeload', preloader);
 
 let index = -1;
 showSlides();
@@ -331,12 +314,16 @@ sliderS4.addEventListener('transitionend', function(){
 
 //Code for API
 const apiKey = "7806e858e7fd4ff48623955a8a5cd984";
-const domain = "https://api.spoonacular.com/recipes/?apiKey=" + apiKey + "&instructionsRequired=true&number=60";
-const searchBar = document.getElementById("searchbar");
+const domain = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&instructionsRequired=true&number=60`;
+const searchBar = document.getElementById('searchbar');
 
-searchBar.addEventListener('submit', (event) => {
-  let searchValue = event.target.value;
-  getRecipes(searchValue);
+searchBar.addEventListener('keyup', function(event){
+  event.preventDefault();
+  if (event.keyCode === 13){
+    let searchValue = event.target.value;
+    getRecipes(searchValue);
+    console.log(searchValue);
+  }
 });
 
 async function sendRequest(url, method, data){
@@ -352,10 +339,11 @@ async function sendRequest(url, method, data){
 }
 
 async function getRecipes(searchValue){
-  let recipes = await sendRequest(domain + "&query=" + searchValue, 'GET');
+  let recipes = await sendRequest(`${domain}&query=${searchValue}`, 'GET');
   displayRecipes(recipes);
+  console.log(recipes);
 }
 
 function displayRecipes(recipes){
-  
+
 }
