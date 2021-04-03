@@ -1,8 +1,4 @@
-// document.onload(function(){
-//   document.querySelectorAll('.card').forEach(img => {
-//     img.classList.add('lazyload');
-//   });
-// });
+
 
 let images = ['images/h1.jpeg','images/h2.jpeg','images/h3.jpeg','images/h4.jpeg','images/h6.jpeg','images/h7.jpeg','images/h8.jpeg','images/h9.jpeg'];
 
@@ -10,16 +6,16 @@ let trial = new Array();
 
 function preloader(){
   for (let image of images){
-    let img = new Image(1000,1000);
+    let img = new Image(2000,2000);
     img = image;
     trial.push(img);
   }
   return trial;
 }
 
-trial = preloader();
+document.addEventListener("DOMContentLoaded", preloader);
 
-console.log(trial);
+trial = preloader();
 
 let index = -1;
 showSlides();
@@ -332,3 +328,24 @@ sliderS4.addEventListener('transitionend', function(){
     sliderS4.style.transition = "transform 1000ms ease";
   });
 });
+
+//Code for API
+const domain = "https://api.spoonacular.com/recipes/";
+const apiKey = "7806e858e7fd4ff48623955a8a5cd984";
+
+async function sendRequest(url, method, data){
+  const options = {method};
+
+  if (data){
+    options.body = JSON.stringify(data);
+    options.headers = {'Content-Type' : 'application/json'};
+  }
+
+  let response = await fetch(url, options);
+  return response.json();
+}
+
+async function getRecipes(){
+  let recipes = await sendRequest(domain, 'GET');
+
+}

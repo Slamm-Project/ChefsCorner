@@ -503,7 +503,9 @@ footer > div > div{
   cursor: pointer;
   transition: filter 500ms ease;
   outline: none;
-  object-position: center; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav button:hover {
