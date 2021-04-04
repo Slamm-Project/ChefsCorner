@@ -46,21 +46,31 @@
   
 	<header>
 		<img src="images/Name.jpeg" alt="SiteName">
-    <a href="#" class="navi">
+    <a href="#" class="navi" onclick="asideDisplay()">
       <div class="one"></div>
       <div class="two"></div>
       <div class="three"></div>
     </a>
-    <i class="fa fa-search"></i>
+    <i id="searchicon" onclick="searchAppear()" class="fa fa-search"></i>
   </header>
 
-    <div id="searchResultArea"></div>
+  <div id="searchArea">
+    <input type="text" name="searchbar" id="searchbar" placeholder="Search">
+  </div>
 
-    <div id="welcome"></div>
+  <aside id="aside">
+    <span onclick="asideDisplay()">&#10005;</span>
+    <a href="#featuredHeader">Featured Dishes</a>
+    <a href="#About">About Us</a>
+    <a href="#commentsection">Leave A Comment</a>
+    <a href="#Contact">Contact Us</a>
+  </aside>
 
-   <section id="HomeBG"></section>
+  <div id="welcome"></div>
 
-   <div id="featuredHeader">•⊹ 🅵🅴🅰🆃🆄🆁🅴🅳 ⊹•</div>
+  <section id="HomeBG"></section>
+
+    <div id="featuredHeader">•⊹ 🅵🅴🅰🆃🆄🆁🅴🅳 ⊹•</div>
     <div id = "featured">
       
       <a id="appz" href="#" onclick = "featuredDiv1()">
@@ -1594,10 +1604,10 @@
     <footer>
       <div>
         <div>
-          <p>Thank you for visiting Chef's Corner! <br><br> We hope you found our recipes delectable. See you soon!</p>
+          <p style="margin-top: 0"><b>Thank you for visiting Chef's Corner! </b><br><br> We hope you found our recipes delectable. See you soon!</p>
         </div>
         <div id="Contact">
-          Contact Us: <br><br>
+          <b>Contact Us:</b><br>
           <img id="SMicon" src="images/SocialMediaIcons.png" alt="Social Media Links">
         </div>
         <div>

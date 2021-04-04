@@ -1,5 +1,41 @@
 window.addEventListener('onload', preloader);
 
+const searchBar = document.getElementById("searchbar");
+const searchArea = document.getElementById("searchArea");
+let aside = document.getElementById('aside');
+const mq = window.matchMedia('(max-width: 600px)');
+
+function asideDisplay(){
+  if (!mq.matches && aside.offsetWidth === 0){
+    aside.style.maxWidth = "15em";
+    aside.style.visibility = "visible";
+    aside.style.transition = "all 500ms ease";
+    aside.style.width = "15em";
+  }
+  else if (mq.matches && aside.offsetWidth === 0){
+    aside.style.maxWidth = "100vw";
+    aside.style.visibility = "visible";
+    aside.style.transition = "all 500ms ease";
+    aside.style.width = "100vw";
+  }
+  else {
+    aside.style.maxWidth = "0";
+  }
+}
+
+function searchAppear(){
+  if (searchArea.classList.contains('appear')) {
+    searchArea.classList.add('disappear');
+    searchArea.classList.remove('appear');
+  }
+  else {
+    searchArea.classList.add('appear');
+    if (searchArea.classList.contains('disappear')) {
+      searchArea.classList.remove('disappear');
+    }
+  }
+}
+
 let index = -1;
 showSlides();
 function showSlides(){
@@ -313,8 +349,6 @@ sliderS4.addEventListener('transitionend', function(){
 });
 
 //Code for API
-const searchBar = document.getElementById('searchbar');
-
 searchBar.addEventListener('keyup', function(event){
   event.preventDefault();
   if (event.keyCode === 13){
@@ -327,8 +361,6 @@ searchBar.addEventListener('keyup', function(event){
 const apiKey = "7806e858e7fd4ff48623955a8a5cd984";
 const domain = "https://api.spoonacular.com/recipes/";
 const additionalRequest = `&apiKey=${apiKey}&instructionsRequired=true&number=21`;
-
-
 
 async function sendRequest(url, method, data){
   const options = {method};
@@ -344,6 +376,7 @@ async function sendRequest(url, method, data){
 
 async function getRecipes(searchValue){
   let recipes = await sendRequest(`${domain}complexSearch?query=${searchValue+additionalRequest}`, 'GET');
+  console.log(recipes);
   displayRecipes(recipes);
   let ids = [];
   let idList = "";
