@@ -398,5 +398,5 @@ async function getRecipes(searchValue){
 
 function displayRecipes(recipes){
   let html = "";
-  let searchResultArea = document.getElementById('');
+  let searchResult = document.getElementById('searchResult');
 }

@@ -110,6 +110,25 @@ header > img {
   min-height: 0;
 }
 
+#searchResult {
+  width: 94.5vw;
+  height: 32em;
+  background-color: white;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5em;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 1em 0;
+}
+
+#searchResult .card {
+  margin: 1em auto;
+  height: 30em;
+  width: 22em;
+}
+
 .appear {
   animation-name: riseUp2;
   animation-duration: 1s;
@@ -172,6 +191,8 @@ header > img {
   background-color: rgb(30,30,30);
   padding-left: 1em;
   outline: none;
+  color: white;
+  font-size: 1em;
 }
 
 #searchbar::placeholder {
@@ -225,6 +246,16 @@ header > img {
 #aside a:hover, #aside span:hover {
   color: black;
   background-color: white;
+}
+
+#aside img {
+  height: 6em;
+  width: 6em;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 2em;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 #About{
@@ -677,9 +708,34 @@ footer > div > div{
     display: inline;
   }
 
-  .card {
+  .slider .card {
     width: 20em;
     margin: 1em auto; 
+  }
+
+  #searchResult .card {
+    height: 28em;
+    width: 18em;
+    margin: 0 auto;
+  }
+
+  #searchResult {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  #searchResult .card {
+    height: 26em;
+    width: 16em;
+    margin: 0 auto;
+  }
+
+  #searchResult {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
@@ -712,9 +768,13 @@ footer > div > div{
 }
 
 @media screen and (max-width: 300px) {
-  .card {
+  .slider .card, #searchResult .card {
     width: 15em;
     margin: 0 auto;
+  }
+
+  #searchResult .card {
+    height: 24em;
   }
 
   #Section1Div, #Section2Div, #Section3Div, #Section4Div {
