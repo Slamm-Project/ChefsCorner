@@ -108,25 +108,43 @@ header > img {
   visibility: hidden; 
   max-height: 0;
   min-height: 0;
+  transition: all 500ms ease;
 }
 
 #searchResult {
   width: 94.5vw;
-  height: 32em;
-  background-color: white;
-  margin: auto;
+  background-color: black;
+  margin: 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5em;
   overflow-y: auto;
   overflow-x: hidden;
-  padding: 1em 0;
+  max-height: 0;
+  height: 0;
+  position: relative;
 }
 
 #searchResult .card {
   margin: 1em auto;
   height: 30em;
   width: 22em;
+}
+
+#searchResult > span {
+  cursor: pointer;
+  color: white;
+  position: absolute;
+  top: 0;
+  right: 0.5em;
+  margin: 0 auto;
+  font-size: 18px;
+  transition: all 500ms ease;
+}
+
+#searchResult > span:hover {
+  background-color: white;
+  color: black;
 }
 
 .appear {
@@ -252,10 +270,8 @@ header > img {
   height: 6em;
   width: 6em;
   border-radius: 50%;
-  position: absolute;
-  bottom: 2em;
-  left: 50%;
-  transform: translateX(-50%);
+  display: block;
+  margin: max(1em, 20vh) auto 1em auto;
 }
 
 #About{
@@ -383,7 +399,7 @@ footer > div > div{
 }
 
 #SMicon {
-  width: max(min(8em), 70%);
+  width: max(8em, 70%);
   max-width: 11em;
   height: auto;
 }
@@ -477,7 +493,7 @@ footer > div > div{
   margin: 0.25em auto;
   width: 94.5vw;
   color: white;
-  font-size: max(min(1.25em), 3vw);
+  font-size: max(1.25em, 3vw);
   text-align: center;
   background-image: url();
 }
@@ -488,7 +504,7 @@ footer > div > div{
   font-weight: bold;
   text-align: center;
   height: auto;
-  font-size: max(min(1.1em), 3.5vmin); 
+  font-size: max(1.1em, 3.5vmin); 
   width: 95vw;
   margin: 1em auto;
 }
@@ -500,7 +516,7 @@ footer > div > div{
   transition: background-color 750ms ease, color 250ms ease;
   text-decoration: none;
   color: white;
-  height: max(min(1.2em), 6vh);
+  height: max(1.2em, 6vh);
   justify-content: center;
   align-items: center;
   border: 2px solid cadetblue;
@@ -660,6 +676,7 @@ footer > div > div{
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .nav button {
@@ -723,6 +740,12 @@ footer > div > div{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 5%;
+    height: 0;
+    max-height: 0;
+  }
+
+  #Section1Div, #Section2Div, #Section3Div, #Section4Div {
+    height: 32em;
   }
 }
 
@@ -774,10 +797,10 @@ footer > div > div{
   }
 
   #searchResult .card {
-    height: 24em;
+    height: 22em;
   }
 
   #Section1Div, #Section2Div, #Section3Div, #Section4Div {
-    height: 65vh;
+    height: 24em;
   }
 }

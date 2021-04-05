@@ -1,4 +1,5 @@
-window.addEventListener('onload', preloader);
+window.addEventListener('onload', preloader());
+window.addEventListener('onload', cardEmbed());
 
 const searchBar = document.getElementById("searchbar");
 const searchArea = document.getElementById("searchArea");
@@ -114,23 +115,25 @@ if (x.style.display=== "none"){
   }
 }
 
-document.querySelectorAll('.card').forEach(div => {
-  div.addEventListener('click', () => {
-    let cardinfo = div.querySelector('.hideInfo');
-    if (!cardinfo.classList.contains('showInfo')){
-      cardinfo.style.display = "block";
-      cardinfo.classList.remove('rolldown');
-      cardinfo.classList.toggle('showInfo');
-    } 
-    else {
-      cardinfo.classList.remove('showInfo');
-      cardinfo.classList.toggle('rolldown');
-      setTimeout(function(){
-        cardinfo.style.display = "none";
-      }, 200);      
-    }
+function cardEmbed(){
+  document.querySelectorAll('.card').forEach(div => {
+    div.addEventListener('click', () => {
+      let cardinfo = div.querySelector('.hideInfo');
+      if (!cardinfo.classList.contains('showInfo')){
+        cardinfo.style.display = "block";
+        cardinfo.classList.remove('rolldown');
+        cardinfo.classList.toggle('showInfo');
+      } 
+      else {
+        cardinfo.classList.remove('showInfo');
+        cardinfo.classList.toggle('rolldown');
+        setTimeout(function(){
+          cardinfo.style.display = "none";
+        }, 200);      
+      }
+    });
   });
-});
+}
 
 //  Code for Appetizer Slider
 const prevS1 = document.getElementById("Section1Div").querySelector('.prev');
@@ -375,9 +378,9 @@ async function sendRequest(url, method, data){
 }
 
 async function getRecipes(searchValue){
+  showResult();
   let recipes = await sendRequest(`${domain}complexSearch?query=${searchValue+additionalRequest}`, 'GET');
-  console.log(recipes);
-  displayRecipes(recipes);
+    console.log(recipes);
   let ids = [];
   let idList = "";
   for (let result of recipes.results){
@@ -393,10 +396,55 @@ async function getRecipes(searchValue){
   }
 
   let idBulkInfo = await sendRequest(`${domain}informationBulk?ids=${idList+additionalRequest}`);
-  console.log(idBulkInfo[0]);
+  
+  displayRecipes(recipes, idBulkInfo);
 }
 
-function displayRecipes(recipes){
-  let html = "";
-  let searchResult = document.getElementById('searchResult');
+let searchResult = document.getElementById('searchResult');
+
+function showResult(){
+  if (searchResult.offsetHeight === 0){
+    searchResult.style.transition = "all 500ms ease";
+    searchResult.style.maxHeight = "33em";
+    searchResult.style.height = "33em";
+    searchResult.style.margin = "1em auto";
+    searchResult.style.paddingTop = "2em";
+  }
+  else {
+    searchResult.style.transition = "all 500ms ease";
+    searchResult.style.maxHeight = "0";
+    searchResult.style.height = "0";
+    searchResult.style.margin = "0 auto";
+    searchResult.style.paddingTop = "0";
+  }
+}
+
+function displayRecipes(recipes, idBulkInfo){
+  let html = "<span onclick='showResult()'>&#10005;</span>";
+  for (let i = 0; i < recipes.results.length; i++){
+    html += `
+      <div class="card">
+        <a>
+          <img src="${recipes.results[i].image}" alt="${recipes.results[i].title}">
+          <div class="dishName">${recipes.results[i].title}</div>
+        </a>
+        <div class="hideInfo">
+          <span style="font-weight: bold;">Ingredients</span>
+          <ul>`;
+            for (let x = 0; x < idBulkInfo[i].extendedIngredients.length; x++){
+              html += `
+                <li>${idBulkInfo[i].extendedIngredients[x].original}</li>
+              `;
+            }
+    html += `
+          </ul>
+          <span style="font-weight: bold">Method</span>
+          ${idBulkInfo[i].instructions}
+        </div>
+      </div>
+    `;
+  }
+
+  searchResult.innerHTML = html;
+  cardEmbed();
 }
