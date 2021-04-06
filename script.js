@@ -357,7 +357,6 @@ searchBar.addEventListener('keyup', function(event){
   if (event.keyCode === 13){
     let searchValue = event.target.value;
     getRecipes(searchValue);
-    console.log(searchValue);
   }
 });
 
@@ -378,9 +377,7 @@ async function sendRequest(url, method, data){
 }
 
 async function getRecipes(searchValue){
-  showResult();
   let recipes = await sendRequest(`${domain}complexSearch?query=${searchValue+additionalRequest}`, 'GET');
-    console.log(recipes);
   let ids = [];
   let idList = "";
   for (let result of recipes.results){
@@ -447,4 +444,7 @@ function displayRecipes(recipes, idBulkInfo){
 
   searchResult.innerHTML = html;
   cardEmbed();
+  if (searchResult.offsetHeight === 0) {
+    showResult();
+  }
 }
