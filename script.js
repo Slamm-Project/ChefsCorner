@@ -123,7 +123,29 @@ function cardEmbed(){
         cardinfo.style.display = "block";
         cardinfo.classList.remove('rolldown');
         cardinfo.classList.toggle('showInfo');
-      } 
+      }
+      else {
+        cardinfo.classList.remove('showInfo');
+        cardinfo.classList.toggle('rolldown');
+        setTimeout(function(){
+          cardinfo.style.display = "none";
+        }, 200);      
+      }
+    });
+  });
+}
+
+let searchResult = document.getElementById('searchResult');
+
+function searchCardEmbed(){
+  searchResult.querySelectorAll('.card').forEach(div => {
+    div.addEventListener('click', () => {
+      let cardinfo = div.querySelector('.hideInfo');
+      if (!cardinfo.classList.contains('showInfo')){
+        cardinfo.style.display = "block";
+        cardinfo.classList.remove('rolldown');
+        cardinfo.classList.toggle('showInfo');
+      }
       else {
         cardinfo.classList.remove('showInfo');
         cardinfo.classList.toggle('rolldown');
@@ -397,8 +419,6 @@ async function getRecipes(searchValue){
   displayRecipes(recipes, idBulkInfo);
 }
 
-let searchResult = document.getElementById('searchResult');
-
 function showResult(){
   if (searchResult.offsetHeight === 0){
     searchResult.style.transition = "all 500ms ease";
@@ -443,7 +463,7 @@ function displayRecipes(recipes, idBulkInfo){
   }
 
   searchResult.innerHTML = html;
-  cardEmbed();
+  searchCardEmbed();
   if (searchResult.offsetHeight === 0) {
     showResult();
   }
