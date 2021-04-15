@@ -3,7 +3,7 @@ window.addEventListener('onload', cardEmbed());
 
 const searchBar = document.getElementById("searchbar");
 const searchArea = document.getElementById("searchArea");
-let aside = document.getElementById('aside');
+const aside = document.getElementById('aside');
 const mq = window.matchMedia('(max-width: 600px)');
 
 function asideDisplay(){
