@@ -1,4 +1,4 @@
-# ChefsCorner
+# Chefs Corner
 
 This site was made as a university project and its idea was to stimulate a recipe website for aspiring chefs.
 
